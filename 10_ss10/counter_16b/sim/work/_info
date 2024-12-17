@@ -1,0 +1,72 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/ictc/student-data/duyquang/10_ss10/counter_16b/sim
+T_opt
+!s110 1729637536
+VV?ZQYc2S^[WT0dP`4^VO`1
+04 10 4 work test_bench fast 0
+=1-000ae431a4f1-67182ca0-9c4fc-16fdc7
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+R1
+vcounter
+Z3 2../rtl/counter.v|../tb/test_bench.v
+Z4 !s110 1729644652
+!i10b 1
+!s100 i0>6Oc>F7_[KoDGEWQ8ZD1
+ImehHD7z>b`7>Qeb[4EV>R0
+R1
+w1729637527
+8../rtl/counter.v
+F../rtl/counter.v
+!i122 6
+L0 1 24
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z7 !s108 1729644652.000000
+!s107 ../tb/test_bench.v|../rtl/counter.v|
+Z8 !s90 -f|compile.f|
+!i113 0
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtest_bench
+R3
+R4
+!i10b 1
+!s100 @Yz0OV7_=GSkfC?NjN`]F3
+I3eYSo4IJhY3G]MOM4foOW1
+R1
+w1729471426
+8../tb/test_bench.v
+F../tb/test_bench.v
+!i122 6
+L0 4 111
+R5
+R6
+r1
+!s85 0
+31
+R7
+Z10 !s107 ../tb/test_bench.v|../rtl/counter.v|
+R8
+!i113 0
+R9
+R2

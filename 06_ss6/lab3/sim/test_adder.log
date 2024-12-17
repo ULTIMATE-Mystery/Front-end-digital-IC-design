@@ -1,0 +1,60 @@
+# vsim -debugDB -l test_adder.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
+# Start time: 18:18:47 on Oct 06,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.test_bench(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# log -r /*
+# run -all
+# 01.Bitwise XOR             : 4'b1010 ^ 4'b0011     = 4'b1001
+# 02.Bitwise AND             : 4'b1010 & 4'b0011     = 4'b0010
+# 03.Bitwise OR              : 4'b1010 | 4'b0011     = 4'b1011
+# 04.Bitwise INV             : ~4'b1010              = 4'b0101
+# 05.Addition                : 4'b1010 + 4'b0011     = 4'b1101
+# 06.Subtraction             : 4'b1010 - 4'b0011     = 4'b0111
+# 07.Multiplication          : 4'b0101 * 4'b0010     = 4'b1010
+# 08.Division                : 4'b1010 / 4'b0010     = 4'b0101
+# 09.Modulo                  : 4'b1011 % 4'b0010     = 4'b0001
+# 10.Greater                 : 4'b1010 > 4'b1000     = 1'b1
+# 11.Greater or Equal        : 4'b1010 >= 4'b1010    = 1'b1
+# 12.Less                    : 4'b1010 < 4'b1001     = 1'b0
+# 13.Less or Equal           : 4'b1010 <= 4'b1010    = 1'b1
+# 14.1.Logical Equality      : 4'b1100 == 4'b1100    = 1'b1
+# 14.2.Logical Equality      : 4'b1100 == 4'b110x    = 1'bx
+# 15.1.Logical Inequality    : 4'b1100 != 4'b1100    = 1'b0
+# 15.2.Logical Inequality    : 4'b1100 != 4'b110x    = 1'bx
+# 16.1.Case Equality         : 4'b1100 === 4'b1100   = 1'b1
+# 16.2.Case Equality         : 4'b1100 === 4'b110x   = 1'b0
+# 17.1.Case Inequality       : 4'b1100 !== 4'b1100   = 1'b0
+# 17.2.Case Inequality       : 4'b1100 !== 4'b110x   = 1'b1
+# 18.1.Logical And           : a=5,b=3 = ((a==5) && (b==3)) = 1
+# 18.2.Logical And           : 4'b1010 && 4'b0001    = 1'b1
+# 19.1.Logical OR            : a=5,b=3 = ((a!=5) || (b!=3)) = 0
+# 19.2.Logical OR            : 4'b0010 || 4'b0001    = 1'b1
+# 20.1.Logical Invert        : !1'b1                 = 1'b0
+# 20.2.Logical Invert        : !4'b0001              = 1'b0
+# 21.Logical Shift Left      : 1 << 2                = 4'b0100
+# 22.Logical Shift Right     : 4'b1101 >> 2          = 4'b0011
+# 23.Reduction And           : a=4'b1011 --> &a[3:0] = 1'b0
+# 24.Reduction Or            : a=4'b1000 --> |a[3:0] = 1'b1
+# 25.Reduction XOR           : a=4'b1010 --> ^a[3:0] = 1'b0
+# 26. Concatenation          : a=4'b1100, b=3'b001 -->{a[3:0],b[2:0]} = 7'b1100001
+# 27. Replication            : {4 {2'b10}}           = 8'b10101010
+# ** Note: $finish    : ../tb/test_bench.v(63)
+#    Time: 0 ns  Iteration: 0  Instance: /test_bench
+# End time: 18:18:47 on Oct 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

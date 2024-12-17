@@ -1,0 +1,94 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/ictc/student-data/duyquang/08_ss8/decoder_3to8/sim
+T_opt
+!s110 1728883838
+VBVjV6EAAb4c`lU>`I5<H<0
+04 10 4 work test_bench fast 0
+=1-000ae431a4f1-670cac7e-b5544-5720b
+R0
+!s12b OEM100
+!s124 OEM10U4 
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vdecoder_2to4
+Z3 2../rtl/decoder_2to4.v|../rtl/decoder_3to8.v|../tb/test_bench.v
+Z4 !s110 1728883832
+!i10b 1
+!s100 RLUf@:ho`;4VPNiZC<`:12
+IS=1_9Zc:EVKFc??3``Y>a2
+R1
+w1728839281
+8../rtl/decoder_2to4.v
+F../rtl/decoder_2to4.v
+!i122 0
+L0 2 20
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z7 !s108 1728883832.000000
+Z8 !s107 ../tb/test_bench.v|../rtl/decoder_3to8.v|../rtl/decoder_2to4.v|
+Z9 !s90 -f|compile.f|
+!i113 0
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vdecoder_3to8
+R3
+R4
+!i10b 1
+!s100 iS[LQ6:;`h;@g`B8k_;EG2
+IX:jL19a]BBHfCNdXTeH@z3
+R1
+w1728842596
+8../rtl/decoder_3to8.v
+F../rtl/decoder_3to8.v
+!i122 0
+L0 2 17
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R2
+vtest_bench
+R3
+R4
+!i10b 1
+!s100 3UMdWom]Gla]iUZL=S;5Z1
+I9=l_Km?d@Z47V9VH;GNYn1
+R1
+w1728831835
+8../tb/test_bench.v
+F../tb/test_bench.v
+!i122 0
+L0 1 40
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R2

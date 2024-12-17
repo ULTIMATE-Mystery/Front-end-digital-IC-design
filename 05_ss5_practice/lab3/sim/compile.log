@@ -1,0 +1,10 @@
+Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+Start time: 04:51:41 on Sep 28,2024
+vlog -sv -f compile.f 
+-- Compiling module top
+-- Compiling module test_bench
+
+Top level modules:
+	test_bench
+End time: 04:51:42 on Sep 28,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

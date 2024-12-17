@@ -1,0 +1,319 @@
+# vsim -coverage -l reg_byte_access.log -c testbench -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit reg_byte_access.ucdb; log -r /*;run -all" 
+# Start time: 21:34:05 on Dec 16,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "timer_apb_if(fast)".
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.testbench(fast)
+# coverage save -onexit reg_byte_access.ucdb
+#  log -r /*
+# run -all
+# ===================================
+# Test Case: Register Byte Access Check
+# ===================================
+# 
+# [Test ID 3] TCR Register Byte Access
+# t = 18000 [TB WRITE]: addr=0x0000 data=ffffffff strb=0001
+# t = 29000 PASS: pslverr is not asserted
+# ----------------------------------------
+# t = 38000 [TB READ]: addr=0x0000
+# t = 49000 PASS: rdata = 00000103 at addr 0x0000 is correct
+# t = 73000 [TB WRITE]: addr=0x0000 data=fffff5ff strb=0010
+# t = 84000 PASS: pslverr is not asserted
+# ----------------------------------------
+# t = 93000 [TB READ]: addr=0x0000
+# t = 104000 PASS: rdata = 00000500 at addr 0x0000 is correct
+# t = 128000 [TB WRITE]: addr=0x0000 data=ffffffff strb=0100
+# t = 139000 PASS: pslverr is not asserted
+# ----------------------------------------
+# t = 148000 [TB READ]: addr=0x0000
+# t = 159000 PASS: rdata = 00000100 at addr 0x0000 is correct
+# t = 183000 [TB WRITE]: addr=0x0000 data=ffffffff strb=1000
+# t = 194000 PASS: pslverr is not asserted
+# ----------------------------------------
+# t = 203000 [TB READ]: addr=0x0000
+# t = 214000 PASS: rdata = 00000100 at addr 0x0000 is correct
+# t = 238000 [TB WRITE]: addr=0x0000 data=55555555 strb=0011
+# t = 249000 PASS: pslverr is not asserted
+# ----------------------------------------
+# t = 258000 [TB READ]: addr=0x0000
+# t = 269000 PASS: rdata = 00000501 at addr 0x0000 is correct
+# t = 293000 [TB WRITE]: addr=0x0000 data=ffffffff strb=1100
+# t = 304000 PASS: pslverr is not asserted
+# ----------------------------------------
+# t = 313000 [TB READ]: addr=0x0000
+# t = 324000 PASS: rdata = 00000100 at addr 0x0000 is correct
+# ----------------------------------------
+# t = 333000 [TB WRITE]: addr=0x0000 data=00000001 strb=0001
+# ----------------------------------------
+# t = 353000 [TB READ]: addr=0x0000
+# t = 364000 PASS: rdata = 00000101 at addr 0x0000 is correct
+# ----------------------------------------
+# t = 373000 [TB WRITE]: addr=0x0000 data=00000100 strb=0010
+# ----------------------------------------
+# t = 393000 [TB READ]: addr=0x0000
+# t = 404000 PASS: rdata = 00000101 at addr 0x0000 is correct
+# 
+# [Test ID 6] TDR0 Register Byte Access
+# ----------------------------------------
+# t = 443000 [TB WRITE]: addr=0x0004 data=11111111 strb=0001
+# ----------------------------------------
+# t = 463000 [TB READ]: addr=0x0004
+# t = 474000 PASS: rdata = 00000011 at addr 0x0004 is correct
+# ----------------------------------------
+# t = 483000 [TB WRITE]: addr=0x0004 data=22222222 strb=0010
+# ----------------------------------------
+# t = 503000 [TB READ]: addr=0x0004
+# t = 514000 PASS: rdata = 00002211 at addr 0x0004 is correct
+# ----------------------------------------
+# t = 523000 [TB WRITE]: addr=0x0004 data=33333333 strb=0100
+# ----------------------------------------
+# t = 543000 [TB READ]: addr=0x0004
+# t = 554000 PASS: rdata = 00332211 at addr 0x0004 is correct
+# ----------------------------------------
+# t = 563000 [TB WRITE]: addr=0x0004 data=44444444 strb=1000
+# ----------------------------------------
+# t = 583000 [TB READ]: addr=0x0004
+# t = 594000 PASS: rdata = 44332211 at addr 0x0004 is correct
+# ----------------------------------------
+# t = 603000 [TB WRITE]: addr=0x0004 data=55555555 strb=0011
+# ----------------------------------------
+# t = 623000 [TB READ]: addr=0x0004
+# t = 634000 PASS: rdata = 44335555 at addr 0x0004 is correct
+# ----------------------------------------
+# t = 643000 [TB WRITE]: addr=0x0004 data=66666666 strb=1100
+# ----------------------------------------
+# t = 663000 [TB READ]: addr=0x0004
+# t = 674000 PASS: rdata = 66665555 at addr 0x0004 is correct
+# 
+# [Test ID 9] TDR1 Register Byte Access
+# ----------------------------------------
+# t = 698000 [TB WRITE]: addr=0x0008 data=11111111 strb=0001
+# ----------------------------------------
+# t = 718000 [TB READ]: addr=0x0008
+# t = 729000 PASS: rdata = 00000011 at addr 0x0008 is correct
+# ----------------------------------------
+# t = 738000 [TB WRITE]: addr=0x0008 data=22222222 strb=0010
+# ----------------------------------------
+# t = 758000 [TB READ]: addr=0x0008
+# t = 769000 PASS: rdata = 00002211 at addr 0x0008 is correct
+# ----------------------------------------
+# t = 778000 [TB WRITE]: addr=0x0008 data=33333333 strb=0100
+# ----------------------------------------
+# t = 798000 [TB READ]: addr=0x0008
+# t = 809000 PASS: rdata = 00332211 at addr 0x0008 is correct
+# ----------------------------------------
+# t = 818000 [TB WRITE]: addr=0x0008 data=44444444 strb=1000
+# ----------------------------------------
+# t = 838000 [TB READ]: addr=0x0008
+# t = 849000 PASS: rdata = 44332211 at addr 0x0008 is correct
+# ----------------------------------------
+# t = 858000 [TB WRITE]: addr=0x0008 data=55555555 strb=0011
+# ----------------------------------------
+# t = 878000 [TB READ]: addr=0x0008
+# t = 889000 PASS: rdata = 44335555 at addr 0x0008 is correct
+# ----------------------------------------
+# t = 898000 [TB WRITE]: addr=0x0008 data=66666666 strb=1100
+# ----------------------------------------
+# t = 918000 [TB READ]: addr=0x0008
+# t = 929000 PASS: rdata = 66665555 at addr 0x0008 is correct
+# 
+# [Test ID 12] TCMP0 Register Byte Access
+# ----------------------------------------
+# t = 953000 [TB WRITE]: addr=0x000c data=11111111 strb=0001
+# ----------------------------------------
+# t = 973000 [TB READ]: addr=0x000c
+# t = 984000 PASS: rdata = ffffff11 at addr 0x000c is correct
+# ----------------------------------------
+# t = 993000 [TB WRITE]: addr=0x000c data=22222222 strb=0010
+# ----------------------------------------
+# t = 1013000 [TB READ]: addr=0x000c
+# t = 1024000 PASS: rdata = ffff2211 at addr 0x000c is correct
+# ----------------------------------------
+# t = 1033000 [TB WRITE]: addr=0x000c data=33333333 strb=0100
+# ----------------------------------------
+# t = 1053000 [TB READ]: addr=0x000c
+# t = 1064000 PASS: rdata = ff332211 at addr 0x000c is correct
+# ----------------------------------------
+# t = 1073000 [TB WRITE]: addr=0x000c data=44444444 strb=1000
+# ----------------------------------------
+# t = 1093000 [TB READ]: addr=0x000c
+# t = 1104000 PASS: rdata = 44332211 at addr 0x000c is correct
+# ----------------------------------------
+# t = 1113000 [TB WRITE]: addr=0x000c data=55555555 strb=0011
+# ----------------------------------------
+# t = 1133000 [TB READ]: addr=0x000c
+# t = 1144000 PASS: rdata = 44335555 at addr 0x000c is correct
+# ----------------------------------------
+# t = 1153000 [TB WRITE]: addr=0x000c data=66666666 strb=1100
+# ----------------------------------------
+# t = 1173000 [TB READ]: addr=0x000c
+# t = 1184000 PASS: rdata = 66665555 at addr 0x000c is correct
+# 
+# [Test ID 15] TCMP1 Register Byte Access
+# ----------------------------------------
+# t = 1208000 [TB WRITE]: addr=0x0010 data=11111111 strb=0001
+# ----------------------------------------
+# t = 1228000 [TB READ]: addr=0x0010
+# t = 1239000 PASS: rdata = ffffff11 at addr 0x0010 is correct
+# ----------------------------------------
+# t = 1248000 [TB WRITE]: addr=0x0010 data=22222222 strb=0010
+# ----------------------------------------
+# t = 1268000 [TB READ]: addr=0x0010
+# t = 1279000 PASS: rdata = ffff2211 at addr 0x0010 is correct
+# ----------------------------------------
+# t = 1288000 [TB WRITE]: addr=0x0010 data=33333333 strb=0100
+# ----------------------------------------
+# t = 1308000 [TB READ]: addr=0x0010
+# t = 1319000 PASS: rdata = ff332211 at addr 0x0010 is correct
+# ----------------------------------------
+# t = 1328000 [TB WRITE]: addr=0x0010 data=44444444 strb=1000
+# ----------------------------------------
+# t = 1348000 [TB READ]: addr=0x0010
+# t = 1359000 PASS: rdata = 44332211 at addr 0x0010 is correct
+# ----------------------------------------
+# t = 1368000 [TB WRITE]: addr=0x0010 data=55555555 strb=0011
+# ----------------------------------------
+# t = 1388000 [TB READ]: addr=0x0010
+# t = 1399000 PASS: rdata = 44335555 at addr 0x0010 is correct
+# ----------------------------------------
+# t = 1408000 [TB WRITE]: addr=0x0010 data=66666666 strb=1100
+# ----------------------------------------
+# t = 1428000 [TB READ]: addr=0x0010
+# t = 1439000 PASS: rdata = 66665555 at addr 0x0010 is correct
+# 
+# [Test ID 18] TIER Register Byte Access
+# ----------------------------------------
+# t = 1463000 [TB WRITE]: addr=0x0014 data=11111111 strb=0001
+# ----------------------------------------
+# t = 1483000 [TB READ]: addr=0x0014
+# t = 1494000 PASS: rdata = 00000001 at addr 0x0014 is correct
+# ----------------------------------------
+# t = 1503000 [TB WRITE]: addr=0x0014 data=22222222 strb=0010
+# ----------------------------------------
+# t = 1523000 [TB READ]: addr=0x0014
+# t = 1534000 PASS: rdata = 00000001 at addr 0x0014 is correct
+# ----------------------------------------
+# t = 1543000 [TB WRITE]: addr=0x0014 data=33333333 strb=0100
+# ----------------------------------------
+# t = 1563000 [TB READ]: addr=0x0014
+# t = 1574000 PASS: rdata = 00000001 at addr 0x0014 is correct
+# ----------------------------------------
+# t = 1583000 [TB WRITE]: addr=0x0014 data=44444444 strb=1000
+# ----------------------------------------
+# t = 1603000 [TB READ]: addr=0x0014
+# t = 1614000 PASS: rdata = 00000001 at addr 0x0014 is correct
+# ----------------------------------------
+# t = 1623000 [TB WRITE]: addr=0x0014 data=66666666 strb=0011
+# ----------------------------------------
+# t = 1643000 [TB READ]: addr=0x0014
+# t = 1654000 PASS: rdata = 00000000 at addr 0x0014 is correct
+# ----------------------------------------
+# t = 1663000 [TB WRITE]: addr=0x0014 data=77777777 strb=1100
+# ----------------------------------------
+# t = 1683000 [TB READ]: addr=0x0014
+# t = 1694000 PASS: rdata = 00000000 at addr 0x0014 is correct
+# 
+# [Test ID 18] TISR Register Byte Access
+# ----------------------------------------
+# t = 1718000 [TB WRITE]: addr=0x000c data=000000ff strb=1111
+# ----------------------------------------
+# t = 1738000 [TB WRITE]: addr=0x0010 data=00000000 strb=1111
+# ----------------------------------------
+# t = 1758000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 1778000 [TB WRITE]: addr=0x0014 data=00000001 strb=1111
+# ----------------------------------------
+# t = 3073000 PASS: Timer interrupt is asserted correctly
+# ----------------------------------------
+# t = 3073000 [TB WRITE]: addr=0x0018 data=ffffffff strb=0010
+# ----------------------------------------
+# t = 3093000 [TB READ]: addr=0x0018
+# t = 3104000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# ----------------------------------------
+# t = 3113000 [TB WRITE]: addr=0x0018 data=ffffffff strb=0100
+# ----------------------------------------
+# t = 3133000 [TB READ]: addr=0x0018
+# t = 3144000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# ----------------------------------------
+# t = 3153000 [TB WRITE]: addr=0x0018 data=ffffffff strb=1000
+# ----------------------------------------
+# t = 3173000 [TB READ]: addr=0x0018
+# t = 3184000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# ----------------------------------------
+# t = 3193000 [TB WRITE]: addr=0x0018 data=ffffffff strb=1100
+# ----------------------------------------
+# t = 3213000 [TB READ]: addr=0x0018
+# t = 3224000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# ----------------------------------------
+# t = 3233000 [TB WRITE]: addr=0x0018 data=00000001 strb=0001
+# ----------------------------------------
+# t = 3253000 [TB READ]: addr=0x0018
+# t = 3264000 PASS: rdata = 00000000 at addr 0x0018 is correct
+# ----------------------------------------
+# t = 3288000 [TB WRITE]: addr=0x000c data=000000ff strb=1111
+# ----------------------------------------
+# t = 3308000 [TB WRITE]: addr=0x0010 data=00000000 strb=1111
+# ----------------------------------------
+# t = 3328000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 3348000 [TB WRITE]: addr=0x0014 data=00000001 strb=1111
+# ----------------------------------------
+# t = 4643000 PASS: Timer interrupt is asserted correctly
+# ----------------------------------------
+# t = 4643000 [TB WRITE]: addr=0x0018 data=00000001 strb=0011
+# ----------------------------------------
+# t = 4663000 [TB READ]: addr=0x0018
+# t = 4674000 PASS: rdata = 00000000 at addr 0x0018 is correct
+# 
+# [Test ID 23] THCSR Register Byte Access
+# ----------------------------------------
+# t = 4698000 [TB WRITE]: addr=0x001c data=11111111 strb=0001
+# ----------------------------------------
+# t = 4718000 [TB READ]: addr=0x001c
+# t = 4729000 PASS: rdata = 00000001 at addr 0x001c is correct
+# ----------------------------------------
+# t = 4738000 [TB WRITE]: addr=0x001c data=22222222 strb=0010
+# ----------------------------------------
+# t = 4758000 [TB READ]: addr=0x001c
+# t = 4769000 PASS: rdata = 00000001 at addr 0x001c is correct
+# ----------------------------------------
+# t = 4778000 [TB WRITE]: addr=0x001c data=33333333 strb=0100
+# ----------------------------------------
+# t = 4798000 [TB READ]: addr=0x001c
+# t = 4809000 PASS: rdata = 00000001 at addr 0x001c is correct
+# ----------------------------------------
+# t = 4818000 [TB WRITE]: addr=0x001c data=44444444 strb=1000
+# ----------------------------------------
+# t = 4838000 [TB READ]: addr=0x001c
+# t = 4849000 PASS: rdata = 00000001 at addr 0x001c is correct
+# ----------------------------------------
+# t = 4858000 [TB WRITE]: addr=0x001c data=66666666 strb=0011
+# ----------------------------------------
+# t = 4878000 [TB READ]: addr=0x001c
+# t = 4889000 PASS: rdata = 00000000 at addr 0x001c is correct
+# ----------------------------------------
+# t = 4898000 [TB WRITE]: addr=0x001c data=77777777 strb=1100
+# ----------------------------------------
+# t = 4918000 [TB READ]: addr=0x001c
+# t = 4929000 PASS: rdata = 00000000 at addr 0x001c is correct
+# ===================================
+# TEST RESULT: PASSED
+# ===================================
+# ** Note: $finish    : ../tb/testbench.v(297)
+#    Time: 5937500 ps  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 21:34:05 on Dec 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

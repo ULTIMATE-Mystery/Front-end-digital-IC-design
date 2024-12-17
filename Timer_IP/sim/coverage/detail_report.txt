@@ -1,0 +1,666 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /testbench/u_timer_top/u_timer_registers
+=== Design Unit: work.timer_registers
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        582       460       122    79.03%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /testbench/u_timer_top/u_timer_registers --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                          TCMP0[0]           1           1      100.00 
+                                          TCMP0[1]           4           3      100.00 
+                                          TCMP0[2]           2           2      100.00 
+                                          TCMP0[3]           3           2      100.00 
+                                          TCMP0[4]           2           2      100.00 
+                                          TCMP0[5]           3           2      100.00 
+                                          TCMP0[6]           2           2      100.00 
+                                          TCMP0[7]           3           2      100.00 
+                                          TCMP0[8]           3           3      100.00 
+                                          TCMP0[9]           4           3      100.00 
+                                         TCMP0[10]           3           3      100.00 
+                                         TCMP0[11]           4           3      100.00 
+                                         TCMP0[12]           3           3      100.00 
+                                         TCMP0[13]           4           3      100.00 
+                                         TCMP0[14]           3           3      100.00 
+                                         TCMP0[15]           4           3      100.00 
+                                         TCMP0[16]           3           3      100.00 
+                                         TCMP0[17]           4           3      100.00 
+                                         TCMP0[18]           3           3      100.00 
+                                         TCMP0[19]           4           3      100.00 
+                                         TCMP0[20]           3           3      100.00 
+                                         TCMP0[21]           4           3      100.00 
+                                         TCMP0[22]           3           3      100.00 
+                                         TCMP0[23]           4           3      100.00 
+                                         TCMP0[24]           3           3      100.00 
+                                         TCMP0[25]           4           3      100.00 
+                                         TCMP0[26]           3           3      100.00 
+                                         TCMP0[27]           4           3      100.00 
+                                         TCMP0[28]           3           3      100.00 
+                                         TCMP0[29]           4           3      100.00 
+                                         TCMP0[30]           3           3      100.00 
+                                         TCMP0[31]           4           3      100.00 
+                                        TCMP1[0-1]           4           3      100.00 
+                                          TCMP1[2]           3           3      100.00 
+                                        TCMP1[3-5]           4           3      100.00 
+                                          TCMP1[6]           3           3      100.00 
+                                        TCMP1[7-9]           4           3      100.00 
+                                         TCMP1[10]           3           3      100.00 
+                                      TCMP1[11-13]           4           3      100.00 
+                                         TCMP1[14]           3           3      100.00 
+                                      TCMP1[15-17]           4           3      100.00 
+                                         TCMP1[18]           3           3      100.00 
+                                      TCMP1[19-21]           4           3      100.00 
+                                         TCMP1[22]           3           3      100.00 
+                                      TCMP1[23-25]           4           3      100.00 
+                                         TCMP1[26]           3           3      100.00 
+                                      TCMP1[27-29]           4           3      100.00 
+                                         TCMP1[30]           3           3      100.00 
+                                         TCMP1[31]           4           3      100.00 
+                                            TCR[0]           6           7      100.00 
+                                            TCR[1]           3           3      100.00 
+                                            TCR[2]           2           2      100.00 
+                                            TCR[3]           1           2      100.00 
+                                            TCR[4]           2           2      100.00 
+                                            TCR[5]           1           1      100.00 
+                                            TCR[6]           2           2      100.00 
+                                            TCR[7]           1           2      100.00 
+                                            TCR[8]           8           5      100.00 
+                                            TCR[9]           1           1      100.00 
+                                           TCR[10]           4           4      100.00 
+                                           TCR[11]           2           3      100.00 
+                                           TCR[12]           2           2      100.00 
+                                           TCR[13]           1           1      100.00 
+                                           TCR[14]           2           2      100.00 
+                                           TCR[15]           1           2      100.00 
+                                           TCR[16]           2           2      100.00 
+                                           TCR[17]           1           1      100.00 
+                                           TCR[18]           2           2      100.00 
+                                           TCR[19]           1           2      100.00 
+                                           TCR[20]           2           2      100.00 
+                                           TCR[21]           1           1      100.00 
+                                           TCR[22]           2           2      100.00 
+                                           TCR[23]           1           2      100.00 
+                                           TCR[24]           2           2      100.00 
+                                           TCR[25]           1           1      100.00 
+                                           TCR[26]           2           2      100.00 
+                                           TCR[27]           1           2      100.00 
+                                           TCR[28]           2           2      100.00 
+                                           TCR[29]           1           1      100.00 
+                                           TCR[30]           2           2      100.00 
+                                           TCR[31]           1           2      100.00 
+                                           TDR0[0]           5           6      100.00 
+                                           TDR0[1]           4           5      100.00 
+                                           TDR0[2]           5           6      100.00 
+                                           TDR0[3]           4           4      100.00 
+                                           TDR0[4]           4           7      100.00 
+                                           TDR0[5]           3           6      100.00 
+                                           TDR0[6]           5           7      100.00 
+                                           TDR0[7]           3           4      100.00 
+                                           TDR0[8]           4           6      100.00 
+                                        TDR0[9-10]           4           7      100.00 
+                                          TDR0[11]           3           4      100.00 
+                                          TDR0[12]           4           7      100.00 
+                                          TDR0[13]           4           6      100.00 
+                                          TDR0[14]           4           7      100.00 
+                                          TDR0[15]           3           4      100.00 
+                                       TDR0[16-18]           5           7      100.00 
+                                          TDR0[19]           4           5      100.00 
+                                          TDR0[20]           5           7      100.00 
+                                          TDR0[21]           4           7      100.00 
+                                          TDR0[22]           4           6      100.00 
+                                          TDR0[23]           4           5      100.00 
+                                          TDR0[24]           4           6      100.00 
+                                          TDR0[25]           5           7      100.00 
+                                          TDR0[26]           4           6      100.00 
+                                          TDR0[27]           4           5      100.00 
+                                       TDR0[28-30]           4           6      100.00 
+                                          TDR0[31]           4           5      100.00 
+                                           TDR1[0]           4           6      100.00 
+                                           TDR1[1]           5           6      100.00 
+                                           TDR1[2]           6           7      100.00 
+                                           TDR1[3]           5           5      100.00 
+                                           TDR1[4]           4           5      100.00 
+                                           TDR1[5]           4           6      100.00 
+                                           TDR1[6]           6           7      100.00 
+                                           TDR1[7]           5           5      100.00 
+                                           TDR1[8]           5           6      100.00 
+                                           TDR1[9]           5           7      100.00 
+                                          TDR1[10]           5           6      100.00 
+                                          TDR1[11]           5           5      100.00 
+                                          TDR1[12]           5           6      100.00 
+                                       TDR1[13-14]           6           7      100.00 
+                                          TDR1[15]           5           5      100.00 
+                                          TDR1[16]           5           6      100.00 
+                                       TDR1[17-18]           6           7      100.00 
+                                          TDR1[19]           5           5      100.00 
+                                          TDR1[20]           5           6      100.00 
+                                       TDR1[21-22]           6           7      100.00 
+                                          TDR1[23]           5           5      100.00 
+                                          TDR1[24]           4           5      100.00 
+                                       TDR1[25-26]           5           7      100.00 
+                                          TDR1[27]           5           5      100.00 
+                                          TDR1[28]           4           5      100.00 
+                                       TDR1[29-30]           6           7      100.00 
+                                          TDR1[31]           4           5      100.00 
+                                          THCSR[0]           4           5      100.00 
+                                          THCSR[1]           2           2      100.00 
+                                       THCSR[2-31]           0           0        0.00 
+                                           TIER[0]           3           4      100.00 
+                                           TIER[1]           2           3      100.00 
+                                           TIER[2]           2           2      100.00 
+                                           TIER[3]           1           1      100.00 
+                                         TIER[4-5]           2           3      100.00 
+                                           TIER[6]           2           2      100.00 
+                                           TIER[7]           1           1      100.00 
+                                           TIER[8]           1           2      100.00 
+                                           TIER[9]           2           3      100.00 
+                                          TIER[10]           2           2      100.00 
+                                          TIER[11]           1           1      100.00 
+                                          TIER[12]           1           2      100.00 
+                                          TIER[13]           2           3      100.00 
+                                          TIER[14]           2           2      100.00 
+                                          TIER[15]           1           1      100.00 
+                                       TIER[16-17]           2           3      100.00 
+                                          TIER[18]           2           2      100.00 
+                                          TIER[19]           1           1      100.00 
+                                       TIER[20-21]           2           3      100.00 
+                                          TIER[22]           2           2      100.00 
+                                          TIER[23]           1           1      100.00 
+                                       TIER[24-25]           2           3      100.00 
+                                          TIER[26]           2           2      100.00 
+                                          TIER[27]           1           1      100.00 
+                                       TIER[28-29]           2           3      100.00 
+                                          TIER[30]           2           2      100.00 
+                                          TIER[31]           1           1      100.00 
+                                           TISR[0]           3           4      100.00 
+                                        TISR[1-31]           0           0        0.00 
+                                         reg_error           2           2      100.00 
+                                      reg_rdata[0]          11          11      100.00 
+                                      reg_rdata[1]          10          10      100.00 
+                                      reg_rdata[2]           9           9      100.00 
+                                      reg_rdata[3]           6           6      100.00 
+                                      reg_rdata[4]           9           9      100.00 
+                                      reg_rdata[5]           7           7      100.00 
+                                      reg_rdata[6]           8           8      100.00 
+                                      reg_rdata[7]           5           5      100.00 
+                                      reg_rdata[8]           9           9      100.00 
+                                   reg_rdata[9-10]           7           7      100.00 
+                                     reg_rdata[11]           8           8      100.00 
+                                  reg_rdata[12-14]           7           7      100.00 
+                                     reg_rdata[15]           6           6      100.00 
+                                  reg_rdata[16-18]           7           7      100.00 
+                                     reg_rdata[19]           6           6      100.00 
+                                  reg_rdata[20-22]           7           7      100.00 
+                                     reg_rdata[23]           6           6      100.00 
+                                  reg_rdata[24-26]           7           7      100.00 
+                                     reg_rdata[27]           6           6      100.00 
+                                  reg_rdata[28-30]           7           7      100.00 
+                                     reg_rdata[31]           6           6      100.00 
+                                        tcr_wr_err           2           2      100.00 
+                                  valid_addr_space           1           1      100.00 
+
+Total Node Count     =        291 
+Toggled Node Count   =        230 
+Untoggled Node Count =         61 
+
+Toggle Coverage      =      79.03% (460 of 582 bins)
+
+=================================================================================
+=== Instance: /testbench
+=== Design Unit: work.testbench
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                       123        77        46    62.60%
+
+================================Branch Details================================
+
+Branch Coverage for instance /testbench
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../tb/testbench.v
+------------------------------------IF Branch------------------------------------
+    113                                      192     Count coming in to IF
+    113             1                        192                 if (tim_prdata === exp_rdata)
+    115             1                    ***0***                 else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    147                                       36     Count coming in to IF
+    147             1                         36                 if (temp_cnt_val === exp_cnt_val)
+    149             1                    ***0***                 else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    292                                        1     Count coming in to IF
+    292             1                          1             if (test_passed)
+    294             1                    ***0***             else
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+  File run_test.v
+------------------------------------IF Branch------------------------------------
+    11                                         1     Count coming in to IF
+    11              1                          1             tim_penable = 1'b0;
+    14              1                    ***0***             tim_pwdata = 32'hFFFF_FFFF;
+Branch totals: 1 hit of 2 branches = 50.00%
+g
+------------------------------------IF Branch------------------------------------
+    25                                         2     Count coming in to IF
+    25              1                          2             if (tim_pslverr == 1'b0) begin
+    27              1                    ***0***             end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    29                                         1     Count coming in to IF
+    29              1                          1                 test_passed = 1'b0;
+    32              1                    ***0***             @(posedge sys_clk);
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    31                                         1     Count coming in to IF
+    31              1                          1             
+    33              1                    ***0***             tim_psel = 1'b0;
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    38                                         1     Count coming in to IF
+    38              1                          1             apb_rd_chk(12'h001, 32'h0000_0000);
+    41              1                    ***0***             tim_psel = 1'b1;
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    51                                         1     Count coming in to IF
+    51              1                          1             tim_penable = 1'b1;
+    54              1                    ***0***             wait (tim_pready);
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    54                                         1     Count coming in to IF
+    54              1                          1             wait (tim_pready);
+    56              1                    ***0***             if (tim_pslverr == 1'b0) begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    56                                         1     Count coming in to IF
+    56              1                          1             if (tim_pslverr == 1'b0) begin
+    58              1                    ***0***             end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    63                                         1     Count coming in to IF
+    63              1                          1             @(posedge sys_clk);
+    65              1                    ***0***             tim_penable = 1'b0;
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    67                                         1     Count coming in to IF
+    67              1                          1             @(posedge sys_clk);
+    69              1                    ***0***             apb_rd_chk(12'h002, 32'h0000_0000);
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    82                                         1     Count coming in to IF
+    82              1                          1             tim_penable = 1'b1;
+    84              1                    ***0***             // Complete the transaction
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    85                                         1     Count coming in to IF
+    85              1                          1             wait (tim_pready);
+    87              1                    ***0***             if (tim_pslverr == 1'b0) begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    87                                         1     Count coming in to IF
+    87              1                          1             if (tim_pslverr == 1'b0) begin
+    89              1                    ***0***             end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    95                                         1     Count coming in to IF
+    95              1                          1             tim_psel = 1'b0;
+    97              1                    ***0***             tim_pwrite = 1'b0;
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    99                                         1     Count coming in to IF
+    99              1                          1     
+    101             1                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    115                                        1     Count coming in to IF
+    115             1                          1             // Complete the transaction
+    117             1                    ***0***             #1;
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    116                                        1     Count coming in to IF
+    116             1                          1             wait (tim_pready);
+    118             1                    ***0***             if (tim_pslverr == 1'b0) begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    118                                        1     Count coming in to IF
+    118             1                          1             if (tim_pslverr == 1'b0) begin
+    120             1                    ***0***             end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    127                                        1     Count coming in to IF
+    127             1                          1             tim_penable = 1'b0;
+    129             1                    ***0***             @(posedge sys_clk);
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    131                                        1     Count coming in to IF
+    131             1                          1             apb_rd_chk(12'h00b, 32'h0000_0000);
+    133             1                    ***0***             // Start APB transaction with unaligned address
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    142                                        1     Count coming in to IF
+    142             1                          1             
+    145             1                    ***0***             
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    147                                        1     Count coming in to IF
+    147             1                          1             wait (tim_pready);
+    149             1                    ***0***             if (tim_pslverr == 1'b0) begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    149                                        1     Count coming in to IF
+    149             1                          1             if (tim_pslverr == 1'b0) begin
+    151             1                    ***0***             end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    157                                        1     Count coming in to IF
+    157             1                          1             tim_psel = 1'b0;
+    160             1                    ***0***             @(posedge sys_clk);
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    159                                        1     Count coming in to IF
+    159             1                          1             tim_pwrite = 1'b0;
+    161             1                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    175                                        1     Count coming in to IF
+    175             1                          1             tim_penable = 1'b1;
+    177             1                    ***0***             // Complete the transaction
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    178                                        1     Count coming in to IF
+    178             1                          1             wait (tim_pready);
+    180             1                    ***0***             if (tim_pslverr == 1'b0) begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    180                                        1     Count coming in to IF
+    180             1                          1             if (tim_pslverr == 1'b0) begin
+    182             1                    ***0***             end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    183                                        1     Count coming in to IF
+    183             1                          1                 $display("t = %0t FAIL: pslverr is asserted", $time);
+    186             1                    ***0***             
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    185                                        1     Count coming in to IF
+    185             1                    ***0***             end
+    188             1                          1             tim_psel = 1'b0;
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    191                                        1     Count coming in to IF
+    191             1                          1             @(posedge sys_clk);
+    193             1                    ***0***             apb_rd_chk(12'h01a, 32'h0000_0000);
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    201                                        1     Count coming in to IF
+    201             1                          1             tim_pstrb = 4'hF;
+    204             1                    ***0***             
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    209                                        1     Count coming in to IF
+    209             1                          1             wait (tim_pready);
+    211             1                    ***0***             if (tim_pslverr == 1'b0) begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    211                                        2     Count coming in to IF
+    211             1                          2             if (tim_pslverr == 1'b0) begin
+    213             1                    ***0***             end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    240                                        1     Count coming in to IF
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    271                                        1     Count coming in to IF
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    304                                        1     Count coming in to IF
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    337                                        1     Count coming in to IF
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    346                                        1     Count coming in to IF
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    368                                        1     Count coming in to IF
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    376                                        1     Count coming in to IF
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    399                                        1     Count coming in to IF
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    430                                        1     Count coming in to IF
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      15        12         3    80.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /testbench --
+
+  File ../tb/testbench.v
+
+
+
+----------------Focused Condition View-------------------
+Line       113 Item    1  (tim_prdata === exp_rdata)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                  Input Term   Covered  Reason for no coverage   Hint
+                 -----------  --------  -----------------------  --------------
+  (tim_prdata === exp_rdata)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                    Non-masking condition(s)      
+ ---------  ---------  --------------------          -------------------------     
+  Row   1:    ***0***  (tim_prdata === exp_rdata)_0  -                             
+  Row   2:         11  (tim_prdata === exp_rdata)_1  -                             
+
+
+
+
+
+----------------Focused Condition View-------------------
+Line       147 Item    1  (temp_cnt_val === exp_cnt_val)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                      Input Term   Covered  Reason for no coverage   Hint
+                     -----------  --------  -----------------------  --------------
+  (temp_cnt_val === exp_cnt_val)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target                        Non-masking condition(s)      
+ ---------  ---------  --------------------              -------------------------     
+  Row   1:    ***0***  (temp_cnt_val === exp_cnt_val)_0  -                             
+  Row   2:          4  (temp_cnt_val === exp_cnt_val)_1  -                             
+
+
+----------------Focused Condition View-------------------
+Line       185 Item    1  (tim_pready === 1'b1)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+             Input Term   Covered  Reason for no coverage   Hint
+            -----------  --------  -----------------------  --------------
+  (tim_pready === 1'b1)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target               Non-masking condition(s)      
+ ---------  ---------  --------------------     -------------------------     
+  Row   1:          1  (tim_pready === 1'b1)_0  -                             
+  Row   2:    ***0***  (tim_pready === 1'b1)_1  -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     515       498        17    96.69%
+
+================================Statement Details================================
+
+Statement Coverage for instance /testbench --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../tb/testbench.v
+    116             1                     $display("t = %0t FAIL: rdata at addr 0x%h is not correct\nExpected: %h\nActual: %h", 
+    118             1                     test_passed = 1'b0;
+    150             1                     $display("t = %0t FAIL: cnt does not match expect value", $time);
+    151             1                     $display("Expect: %h", exp_cnt_val);
+    152             1                     $display("Actual: %h", temp_cnt_val);
+    153             1                     test_passed = 1'b0;
+    295             1                 $display("===================================\nTEST RESULT: FAILED\n===================================");
+  File run_test.v
+    215             1                 test_passed = 1'b0;
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        196       194         2    98.97%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /testbench --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                    current_div_en           3           3      100.00 
+                                current_div_val[0]           7           4      100.00 
+                                current_div_val[1]           2           2      100.00 
+                                current_div_val[2]           3           3      100.00 
+                                current_div_val[3]           2           3      100.00 
+                                      current_halt           2           2      100.00 
+                                  current_timer_en           6           6      100.00 
+                                          dbg_mode           1           2      100.00 
+                                           sys_clk          13          13      100.00 
+                                         sys_rst_n           6          13      100.00 
+                                       test_passed           0           0        0.00 
+                                           tim_int           3           3      100.00 
+                                    tim_paddr[0-1]           1           1      100.00 
+                                    tim_paddr[2-3]          12          12      100.00 
+                                      tim_paddr[4]           8           9      100.00 
+                                      tim_paddr[5]           1           2      100.00 
+                                   tim_paddr[6-12]           1           1      100.00 
+                                       tim_penable          13          13      100.00 
+                                     tim_prdata[0]          11          11      100.00 
+                                     tim_prdata[1]          10          10      100.00 
+                                     tim_prdata[2]           9           9      100.00 
+                                     tim_prdata[3]           6           6      100.00 
+                                     tim_prdata[4]           9           9      100.00 
+                                     tim_prdata[5]           7           7      100.00 
+                                     tim_prdata[6]           8           8      100.00 
+                                     tim_prdata[7]           5           5      100.00 
+                                     tim_prdata[8]           9           9      100.00 
+                                  tim_prdata[9-10]           7           7      100.00 
+                                    tim_prdata[11]           8           8      100.00 
+                                 tim_prdata[12-14]           7           7      100.00 
+                                    tim_prdata[15]           6           6      100.00 
+                                 tim_prdata[16-18]           7           7      100.00 
+                                    tim_prdata[19]           6           6      100.00 
+                                 tim_prdata[20-22]           7           7      100.00 
+                                    tim_prdata[23]           6           6      100.00 
+                                 tim_prdata[24-26]           7           7      100.00 
+                                    tim_prdata[27]           6           6      100.00 
+                                 tim_prdata[28-30]           7           7      100.00 
+                                    tim_prdata[31]           6           6      100.00 
+                                        tim_pready          13          13      100.00 
+                                          tim_psel          13          13      100.00 
+                                       tim_pslverr           2           2      100.00 
+                                    tim_pstrb[0-3]           7          12      100.00 
+                                     tim_pwdata[0]          10          12      100.00 
+                                     tim_pwdata[1]          11          12      100.00 
+                                     tim_pwdata[2]           7           9      100.00 
+                                     tim_pwdata[3]           9          10      100.00 
+                                   tim_pwdata[4-6]           8          10      100.00 
+                                     tim_pwdata[7]           8           9      100.00 
+                                     tim_pwdata[8]          10          12      100.00 
+                                     tim_pwdata[9]          10          11      100.00 
+                                    tim_pwdata[10]          10          12      100.00 
+                                    tim_pwdata[11]          10          11      100.00 
+                                    tim_pwdata[12]           8          10      100.00 
+                                    tim_pwdata[13]           8           9      100.00 
+                                    tim_pwdata[14]           8          10      100.00 
+                                    tim_pwdata[15]           8           9      100.00 
+                                    tim_pwdata[16]           7           9      100.00 
+                                    tim_pwdata[17]           8           9      100.00 
+                                    tim_pwdata[18]           8          10      100.00 
+                                    tim_pwdata[19]           8           9      100.00 
+                                    tim_pwdata[20]           8          10      100.00 
+                                    tim_pwdata[21]           9          10      100.00 
+                                    tim_pwdata[22]           7           9      100.00 
+                                    tim_pwdata[23]           8           9      100.00 
+                                    tim_pwdata[24]           7           9      100.00 
+                                    tim_pwdata[25]           9          10      100.00 
+                                    tim_pwdata[26]           7           9      100.00 
+                                    tim_pwdata[27]           8           9      100.00 
+                                    tim_pwdata[28]           8          10      100.00 
+                                    tim_pwdata[29]           8           9      100.00 
+                                    tim_pwdata[30]           7           9      100.00 
+                                    tim_pwdata[31]           8           9      100.00 
+                                        tim_pwrite          12          12      100.00 
+
+Total Node Count     =         98 
+Toggled Node Count   =         97 
+Untoggled Node Count =          1 
+
+Toggle Coverage      =      98.97% (194 of 196 bins)
+
+
+Total Coverage By Instance (filtered view): 80.84%
+

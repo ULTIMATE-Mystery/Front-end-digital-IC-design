@@ -1,0 +1,179 @@
+# vsim -coverage -l cnt_counting_chk.log -c testbench -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit cnt_counting_chk.ucdb; log -r /*;run -all" 
+# Start time: 21:34:00 on Dec 16,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "timer_apb_if(fast)".
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.testbench(fast)
+# coverage save -onexit cnt_counting_chk.ucdb
+#  log -r /*
+# run -all
+# ===================================
+# Test Case: Counter Counting Check
+# ===================================
+# 
+# [Test ID 26] Check counting at boundary of TDR0 is correct
+# ----------------------------------------
+# t = 93000 [TB WRITE]: addr=0x0004 data=ffffff00 strb=1111
+# ----------------------------------------
+# t = 113000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 1393000 [TB WRITE]: addr=0x001c data=00000001 strb=1111
+# ----------------------------------------
+# t = 1413000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 1428000 [TB READ]: addr=0x008
+# t = 1439000 PASS: cnt = 0000000100000000 matches expect value
+# ----------------------------------------
+# t = 1448000 [TB WRITE]: addr=0x001c data=00000000 strb=1111
+# ----------------------------------------
+# t = 1853000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 1868000 [TB READ]: addr=0x008
+# t = 1879000 PASS: cnt = 0000000100000053 matches expect value
+# 
+# [Test ID 27] Set TDR0/TDR1 then check counting
+# ----------------------------------------
+# t = 1888000 [TB WRITE]: addr=0x0000 data=00000000 strb=1111
+# ----------------------------------------
+# t = 1908000 [TB WRITE]: addr=0x0004 data=ffffff00 strb=1111
+# ----------------------------------------
+# t = 1928000 [TB WRITE]: addr=0x0008 data=ffffffff strb=1111
+# ----------------------------------------
+# t = 1948000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 3218000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 3233000 [TB READ]: addr=0x008
+# t = 3244000 PASS: cnt = 0000000000000000 matches expect value
+# ----------------------------------------
+# t = 3638000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 3653000 [TB READ]: addr=0x008
+# t = 3664000 PASS: cnt = 0000000000000054 matches expect value
+# 
+# [Test ID 28] Check counting at boundary of TDR0/1
+# ----------------------------------------
+# t = 3673000 [TB WRITE]: addr=0x0000 data=00000000 strb=1111
+# ----------------------------------------
+# t = 3693000 [TB WRITE]: addr=0x0004 data=ffffff00 strb=1111
+# ----------------------------------------
+# t = 3713000 [TB WRITE]: addr=0x0008 data=ffffffff strb=1111
+# ----------------------------------------
+# t = 3733000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 5013000 [TB WRITE]: addr=0x001c data=00000001 strb=1111
+# ----------------------------------------
+# t = 5033000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 5048000 [TB READ]: addr=0x008
+# t = 5059000 PASS: cnt = 0000000000000000 matches expect value
+# ----------------------------------------
+# t = 5068000 [TB WRITE]: addr=0x001c data=00000000 strb=1111
+# ----------------------------------------
+# t = 5473000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 5488000 [TB READ]: addr=0x008
+# t = 5499000 PASS: cnt = 0000000000000053 matches expect value
+# 
+# [Test ID 29] Update TDR0/TDR1 during timer operation
+# ----------------------------------------
+# t = 5508000 [TB WRITE]: addr=0x0000 data=00000000 strb=1111
+# ----------------------------------------
+# t = 5528000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 6798000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 6813000 [TB READ]: addr=0x008
+# t = 6824000 PASS: cnt = 0000000000000100 matches expect value
+# ----------------------------------------
+# t = 6958000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 6973000 [TB READ]: addr=0x008
+# t = 6984000 PASS: cnt = 0000000000000120 matches expect value
+# ----------------------------------------
+# t = 6993000 [TB WRITE]: addr=0x0008 data=00000000 strb=1111
+# ----------------------------------------
+# t = 7013000 [TB WRITE]: addr=0x0004 data=ffffff00 strb=1111
+# ----------------------------------------
+# t = 8288000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 8303000 [TB READ]: addr=0x008
+# t = 8314000 PASS: cnt = 0000000100000000 matches expect value
+# ----------------------------------------
+# t = 8708000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 8723000 [TB READ]: addr=0x008
+# t = 8734000 PASS: cnt = 0000000100000054 matches expect value
+# 
+# [Test ID 30] Timer reset and resume test
+# ----------------------------------------
+# t = 9128000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 9143000 [TB READ]: addr=0x008
+# t = 9154000 PASS: cnt = 00000001000000a8 matches expect value
+# ----------------------------------------
+# t = 9163000 [TB WRITE]: addr=0x0000 data=00000000 strb=1111
+# ----------------------------------------
+# t = 9183000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 9198000 [TB READ]: addr=0x008
+# t = 9209000 PASS: cnt = 0000000000000000 matches expect value
+# 
+# [Test ID 31] TDR0/1 write while timer disabled
+# ----------------------------------------
+# t = 9218000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 9623000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 9638000 [TB READ]: addr=0x008
+# t = 9649000 PASS: cnt = 0000000000000053 matches expect value
+# ----------------------------------------
+# t = 9658000 [TB WRITE]: addr=0x0000 data=00000000 strb=1111
+# ----------------------------------------
+# t = 9678000 [TB WRITE]: addr=0x0004 data=ffffff00 strb=1111
+# ----------------------------------------
+# t = 9698000 [TB WRITE]: addr=0x0008 data=ffffffff strb=1111
+# ----------------------------------------
+# t = 9718000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 9733000 [TB READ]: addr=0x008
+# t = 9744000 PASS: cnt = ffffffffffffff00 matches expect value
+# 
+# [Test ID 34] Counter overflow behavior
+# ----------------------------------------
+# t = 9753000 [TB WRITE]: addr=0x0004 data=fffffff0 strb=1111
+# ----------------------------------------
+# t = 9773000 [TB WRITE]: addr=0x0008 data=ffffffff strb=1111
+# ----------------------------------------
+# t = 9793000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 9863000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 9878000 [TB READ]: addr=0x008
+# t = 9889000 PASS: cnt = 0000000000000000 matches expect value
+# ----------------------------------------
+# t = 9998000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 10013000 [TB READ]: addr=0x008
+# t = 10024000 PASS: cnt = 000000000000001b matches expect value
+# ===================================
+# TEST RESULT: PASSED
+# ===================================
+# ** Note: $finish    : ../tb/testbench.v(297)
+#    Time: 11032500 ps  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 21:34:00 on Dec 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

@@ -1,0 +1,86 @@
+m255
+K4
+z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+!s11f MIXED_VERSIONS
+R1
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/ictc/teacher-data/ictc_duc/from_huy/2.IC_Overview_course/00_practice/09_ss9/counter/sim
+T_opt
+!s110 1717057411
+VE6>5IWmSR_B5B5@6AnJoJ2
+Z3 04 10 4 work test_bench fast 0
+=1-000ae431a4f1-66583783-2d22-c0729
+Z4 !s124 OEM10U2 
+Z5 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z6 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+R2
+T_opt1
+!s110 1729634466
+V2?ZS1H]:[o<zXTDEJnlf[3
+R3
+=1-000ae431a4f1-671820a2-eeca-16efcc
+R1
+!s12b OEM100
+R4
+R5
+R6
+n@_opt1
+OL;O;2023.3;77
+R2
+vcounter
+Z7 2../rtl/counter.v|../tb/test_bench.v
+Z8 !s110 1729634497
+!i10b 1
+!s100 CS>3e?i2TF8Fh=TY;BnzD3
+I>RaVj3:>0OZH6XndlMYCV2
+Z9 d/ictc/student-data/duyquang/09_ss9/counter/sim
+w1729634488
+8../rtl/counter.v
+F../rtl/counter.v
+!i122 4
+L0 1 22
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+Z11 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z12 !s108 1729634497.000000
+!s107 ../tb/test_bench.v|../rtl/counter.v|
+Z13 !s90 -f|compile.f|
+!i113 0
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R6
+vtest_bench
+R7
+R8
+!i10b 1
+!s100 KMbDcb@Kff:D>ATU<kPB31
+InWceB`iC`nRI[B[WlB=fA3
+R9
+w1728306909
+8../tb/test_bench.v
+F../tb/test_bench.v
+!i122 4
+L0 4 111
+R10
+R11
+r1
+!s85 0
+31
+R12
+Z15 !s107 ../tb/test_bench.v|../rtl/counter.v|
+R13
+!i113 0
+R14
+R6

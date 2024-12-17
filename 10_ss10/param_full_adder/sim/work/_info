@@ -1,0 +1,175 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/ictc/student-data/duyquang/10_ss10/param_full_adder/sim
+T_opt
+!s110 1729725249
+VB0SLd6bn_U7JW5@V0[3f=3
+04 10 4 work test_bench fast 0
+=1-000ae431a4f1-67198341-38d0f-19176e
+R1
+!s12b OEM100
+!s124 OEM10U98 
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vfull_adder
+Z4 2../rtl/half_adder.v|../rtl/full_adder.v|../rtl/param_full_adder.v|../tb/test_bench.v
+Z5 !s110 1729725245
+!i10b 1
+!s100 Pl:]XBPPX2z1jXnXLG_NP3
+I:VRClNNk:5YK1I`:F^O042
+R2
+w1728473590
+8../rtl/full_adder.v
+F../rtl/full_adder.v
+!i122 20
+L0 1 30
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z8 !s108 1729725245.000000
+Z9 !s107 ../tb/test_bench.v|../rtl/param_full_adder.v|../rtl/full_adder.v|../rtl/half_adder.v|
+Z10 !s90 -f|compile.f|
+!i113 0
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vfull_adder_16b
+R4
+!s110 1729685270
+!i10b 1
+!s100 g@7mX0g;WO9Q=]b3?64UD0
+IQB=g>ZYcO?o2mg1Z=S48f2
+R2
+w1729684150
+Z12 8../rtl/param_full_adder.v
+Z13 F../rtl/param_full_adder.v
+!i122 1
+Z14 L0 1 32
+R6
+R7
+r1
+!s85 0
+31
+!s108 1729685270.000000
+R9
+R10
+!i113 0
+R11
+R3
+vhalf_adder
+R4
+R5
+!i10b 1
+!s100 RYd]LXVTCYUZ<^R4_20Pk3
+I>DO6LnJemiZjKMEoL45M[3
+R2
+w1728296497
+8../rtl/half_adder.v
+F../rtl/half_adder.v
+!i122 20
+L0 1 10
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R3
+vparam_full_adder
+R4
+R5
+!i10b 1
+!s100 ?R70JzJMZ]FYcGCNCdzKD3
+IkWK8a]ZjRiA>NU5e>A<oo1
+R2
+w1729688512
+R12
+R13
+!i122 20
+R14
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R3
+vtest_bench
+R4
+R5
+!i10b 1
+!s100 m[XZNm?>iSDF9]YabgkQ<2
+IC8HbiQG?G]XDWWZ3e3KCk1
+R2
+w1729725239
+Z15 8../tb/test_bench.v
+Z16 F../tb/test_bench.v
+!i122 20
+L0 3 85
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R3
+vtest_bench_full_adder
+R4
+!s110 1729685751
+!i10b 1
+!s100 0HF?:4_ZAiK>U=9alEfSY3
+I<Fc6zSGokbXJFY39[S:nY3
+R2
+w1729685256
+R15
+R16
+!i122 4
+L0 3 56
+R6
+R7
+r1
+!s85 0
+31
+!s108 1729685751.000000
+R9
+R10
+!i113 0
+R11
+R3

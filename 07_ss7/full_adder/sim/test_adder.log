@@ -1,0 +1,75 @@
+# vsim -debugDB -l test_adder.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
+# Start time: 18:30:17 on Oct 09,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test_bench(fast)
+# Loading work.full_adder(fast)
+# Loading work.half_adder(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# log -r /*
+# run -all
+# ======================================
+# ==== Case 1: a = 0, b = 0, c = 0 =====
+# ======================================
+# ------------------------------------------------
+# t=       100 PASS: a=0 b=0 c=0 sum=0 carry =0
+# ------------------------------------------------
+# ======================================
+# ==== Case 2: a = 0, b = 0, c = 1 =====
+# ======================================
+# ------------------------------------------------
+# t=       300 PASS: a=0 b=0 c=1 sum=1 carry =0
+# ------------------------------------------------
+# ======================================
+# ==== Case 3: a = 0, b = 1, c = 0 =====
+# ======================================
+# ------------------------------------------------
+# t=       500 PASS: a=0 b=1 c=0 sum=1 carry =0
+# ------------------------------------------------
+# ======================================
+# ==== Case 4: a = 0, b = 1, c = 1 =====
+# ======================================
+# ------------------------------------------------
+# t=       700 PASS: a=0 b=1 c=1 sum=0 carry =1
+# ------------------------------------------------
+# ======================================
+# ==== Case 5: a = 1, b = 0, c = 0 =====
+# ======================================
+# ------------------------------------------------
+# t=       900 PASS: a=1 b=0 c=0 sum=1 carry =0
+# ------------------------------------------------
+# ======================================
+# ==== Case 6: a = 1, b = 0, c = 1 =====
+# ======================================
+# ------------------------------------------------
+# t=      1100 PASS: a=1 b=0 c=1 sum=0 carry =1
+# ------------------------------------------------
+# ======================================
+# ==== Case 7: a = 1, b = 1, c = 0 =====
+# ======================================
+# ------------------------------------------------
+# t=      1300 PASS: a=1 b=1 c=0 sum=0 carry =1
+# ------------------------------------------------
+# ======================================
+# ==== Case 8: a = 1, b = 1, c = 1 =====
+# ======================================
+# ------------------------------------------------
+# t=      1500 PASS: a=1 b=1 c=1 sum=1 carry =1
+# ------------------------------------------------
+# ** Note: $finish    : ../tb/test_bench.v(186)
+#    Time: 1600 ns  Iteration: 0  Instance: /test_bench
+# End time: 18:30:18 on Oct 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

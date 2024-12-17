@@ -1,0 +1,66 @@
+# vsim -debugDB -l apb_multiple_access.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
+# Start time: 22:06:01 on Jul 31,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test_bench(fast)
+# Loading work.timer_top(fast)
+# Loading work.apbif(fast)
+# Loading work.regset(fast)
+# Loading work.counter(fast)
+# Loading work.cnt_ctrl(fast)
+# Loading work.mod_golden_cnt(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# log -r /*
+# run -all
+# =========================================
+# === Test Case: APB Multi-access Test ====
+# =========================================
+# multiple APB access
+# write TDR0 & write TDR1
+# normal read
+# t=       625 [TB_READ]: addr=00000004 rdata=11111111
+# ------------------------------------------------
+# t=       625 PASS: rdata = 11111111 at addr 00000004 is correct
+# ------------------------------------------------
+# t=       825 [TB_READ]: addr=00000008 rdata=22222222
+# ------------------------------------------------
+# t=       825 PASS: rdata = 22222222 at addr 00000008 is correct
+# ------------------------------------------------
+# normal write
+# t=       825 [TB_WRITE]: addr=00000004 data=33333333
+# t=      1026 [TB_WRITE]: addr=00000008 data=44444444
+# multiple read
+# ------------------------------------------------
+# t=      1376 PASS: rdata = 33333333 at addr 00000004 is correct
+# ------------------------------------------------
+# ------------------------------------------------
+# t=      1526 PASS: rdata = 44444444 at addr 00000008 is correct
+# ------------------------------------------------
+# w-r(TDR0)-w-r(TDR1)
+# ------------------------------------------------
+# t=      1876 PASS: rdata = 55555555 at addr 00000004 is correct
+# ------------------------------------------------
+# ------------------------------------------------
+# t=      2176 PASS: rdata = 66666666 at addr 00000008 is correct
+# ------------------------------------------------
+# Test_result PASSED
+# ** Note: $finish    : ../tb/test_bench.v(94)
+#    Time: 2326 ns  Iteration: 0  Instance: /test_bench
+# End time: 22:06:01 on Jul 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1

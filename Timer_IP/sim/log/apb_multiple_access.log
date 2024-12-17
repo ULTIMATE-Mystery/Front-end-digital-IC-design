@@ -1,0 +1,113 @@
+# vsim -coverage -l apb_multiple_access.log -c testbench -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit apb_multiple_access.ucdb; log -r /*;run -all" 
+# Start time: 21:34:10 on Dec 16,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "timer_apb_if(fast)".
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.testbench(fast)
+# coverage save -onexit apb_multiple_access.ucdb
+#  log -r /*
+# run -all
+# ===================================
+# Test Case: APB Multiple Access Check
+# ===================================
+# ----------------------------------------
+# t = 18000 [TB CONSECUTIVE WRITE]: addr=0x0004 data=ffffffff strb=1111
+# ----------------------------------------
+# t = 33000 [TB CONSECUTIVE WRITE]: addr=0x0008 data=eeeeeeee strb=1111
+# ----------------------------------------
+# t = 48000 [TB CONSECUTIVE READ]: addr=0x0004
+# t = 59000 PASS: rdata = ffffffff at addr 0x0004 is correct
+# ----------------------------------------
+# t = 63000 [TB CONSECUTIVE READ]: addr=0x0008
+# t = 74000 PASS: rdata = eeeeeeee at addr 0x0008 is correct
+# ----------------------------------------
+# t = 78000 [TB CONSECUTIVE WRITE]: addr=0x0004 data=dddddddd strb=1111
+# ----------------------------------------
+# t = 93000 [TB CONSECUTIVE WRITE]: addr=0x0008 data=cccccccc strb=1111
+# ----------------------------------------
+# t = 108000 [TB CONSECUTIVE READ]: addr=0x0004
+# t = 119000 PASS: rdata = dddddddd at addr 0x0004 is correct
+# ----------------------------------------
+# t = 123000 [TB CONSECUTIVE READ]: addr=0x0008
+# t = 134000 PASS: rdata = cccccccc at addr 0x0008 is correct
+# ----------------------------------------
+# t = 138000 [TB CONSECUTIVE WRITE]: addr=0x0004 data=bbbbbbbb strb=1111
+# ----------------------------------------
+# t = 153000 [TB CONSECUTIVE WRITE]: addr=0x0008 data=aaaaaaaa strb=1111
+# ----------------------------------------
+# t = 168000 [TB CONSECUTIVE READ]: addr=0x0004
+# t = 179000 PASS: rdata = bbbbbbbb at addr 0x0004 is correct
+# ----------------------------------------
+# t = 183000 [TB CONSECUTIVE READ]: addr=0x0008
+# t = 194000 PASS: rdata = aaaaaaaa at addr 0x0008 is correct
+# ----------------------------------------
+# t = 198000 [TB CONSECUTIVE WRITE]: addr=0x0004 data=99999999 strb=1111
+# ----------------------------------------
+# t = 213000 [TB CONSECUTIVE WRITE]: addr=0x0008 data=88888888 strb=1111
+# ----------------------------------------
+# t = 228000 [TB CONSECUTIVE READ]: addr=0x0004
+# t = 239000 PASS: rdata = 99999999 at addr 0x0004 is correct
+# ----------------------------------------
+# t = 243000 [TB READ]: addr=0x0008
+# t = 254000 PASS: rdata = 88888888 at addr 0x0008 is correct
+# ----------------------------------------
+# t = 263000 [TB CONSECUTIVE WRITE]: addr=0x0004 data=66666666 strb=1111
+# ----------------------------------------
+# t = 278000 [TB CONSECUTIVE READ]: addr=0x0004
+# t = 289000 PASS: rdata = 66666666 at addr 0x0004 is correct
+# ----------------------------------------
+# t = 293000 [TB CONSECUTIVE WRITE]: addr=0x0004 data=44444444 strb=1111
+# ----------------------------------------
+# t = 308000 [TB CONSECUTIVE READ]: addr=0x0004
+# t = 319000 PASS: rdata = 44444444 at addr 0x0004 is correct
+# ----------------------------------------
+# t = 323000 [TB CONSECUTIVE WRITE]: addr=0x0004 data=22222222 strb=1111
+# ----------------------------------------
+# t = 338000 [TB CONSECUTIVE READ]: addr=0x0004
+# t = 349000 PASS: rdata = 22222222 at addr 0x0004 is correct
+# ----------------------------------------
+# t = 353000 [TB CONSECUTIVE WRITE]: addr=0x0004 data=02468ace strb=1111
+# ----------------------------------------
+# t = 368000 [TB READ]: addr=0x0004
+# t = 379000 PASS: rdata = 02468ace at addr 0x0004 is correct
+# ----------------------------------------
+# t = 388000 [TB CONSECUTIVE WRITE]: addr=0x0008 data=77777777 strb=1111
+# ----------------------------------------
+# t = 403000 [TB CONSECUTIVE READ]: addr=0x0008
+# t = 414000 PASS: rdata = 77777777 at addr 0x0008 is correct
+# ----------------------------------------
+# t = 418000 [TB CONSECUTIVE WRITE]: addr=0x0008 data=55555555 strb=1111
+# ----------------------------------------
+# t = 433000 [TB CONSECUTIVE READ]: addr=0x0008
+# t = 444000 PASS: rdata = 55555555 at addr 0x0008 is correct
+# ----------------------------------------
+# t = 448000 [TB CONSECUTIVE WRITE]: addr=0x0008 data=33333333 strb=1111
+# ----------------------------------------
+# t = 463000 [TB CONSECUTIVE READ]: addr=0x0008
+# t = 474000 PASS: rdata = 33333333 at addr 0x0008 is correct
+# ----------------------------------------
+# t = 478000 [TB CONSECUTIVE WRITE]: addr=0x0008 data=13579bdf strb=1111
+# ----------------------------------------
+# t = 493000 [TB READ]: addr=0x0008
+# t = 504000 PASS: rdata = 13579bdf at addr 0x0008 is correct
+# ===================================
+# TEST RESULT: PASSED
+# ===================================
+# ** Note: $finish    : ../tb/testbench.v(297)
+#    Time: 1512500 ps  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 21:34:10 on Dec 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

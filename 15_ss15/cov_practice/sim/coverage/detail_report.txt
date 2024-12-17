@@ -1,0 +1,31 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /test_bench
+=== Design Unit: work.test_bench
+=================================================================================
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                          8         6         2    75.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /test_bench --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                                 a           0           1       50.00 
+                                                 b           1           1      100.00 
+                                                 c           1           1      100.00 
+                                                 z           0           1       50.00 
+
+Total Node Count     =          4 
+Toggled Node Count   =          2 
+Untoggled Node Count =          2 
+
+Toggle Coverage      =      75.00% (6 of 8 bins)
+
+
+Total Coverage By Instance (filtered view): 75.00%
+

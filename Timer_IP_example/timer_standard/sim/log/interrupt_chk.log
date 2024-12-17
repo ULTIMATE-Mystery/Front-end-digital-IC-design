@@ -1,0 +1,145 @@
+# vsim -debugDB -l interrupt_chk.log -voptargs="+access" -assertdebug -c test_bench -do "log -r /*;run -all;" 
+# Start time: 22:04:46 on Jul 31,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-4308) Enabling visibility using +acc is recommended with debug flow.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test_bench(fast)
+# Loading work.timer_top(fast)
+# Loading work.apbif(fast)
+# Loading work.regset(fast)
+# Loading work.counter(fast)
+# Loading work.cnt_ctrl(fast)
+# Loading work.mod_golden_cnt(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# log -r /*
+# run -all
+# ====================================
+# ====== Test Case: check Interrupt===
+# ====================================
+# t=       100 [TB_WRITE]: addr=0000000c data=000000ff
+# t=       226 [TB_WRITE]: addr=00000010 data=00000000
+# t=       376 [TB_WRITE]: addr=00000014 data=00000001
+# t=       526 [TB_WRITE]: addr=00000000 data=00000001
+# --------------------------------------------------------
+# t=     13725 PASSED: interrupt is asserted
+# --------------------------------------------------------
+# Check interrupt status is 1
+# t=     13875 [TB_READ]: addr=00000018 rdata=00000001
+# ------------------------------------------------
+# t=     13875 PASS: rdata = 00000001 at addr 00000018 is correct
+# ------------------------------------------------
+# assert reset
+# release reset
+# config and assert interrupt again
+# t=     14225 [TB_WRITE]: addr=0000000c data=000000ff
+# t=     14376 [TB_WRITE]: addr=00000010 data=00000000
+# t=     14526 [TB_WRITE]: addr=00000014 data=00000001
+# t=     14676 [TB_WRITE]: addr=00000000 data=00000001
+# --------------------------------------------------------
+# t=     27875 PASSED: interrupt is asserted
+# --------------------------------------------------------
+# Check interrupt status is 1
+# t=     28025 [TB_READ]: addr=00000018 rdata=00000001
+# ------------------------------------------------
+# t=     28025 PASS: rdata = 00000001 at addr 00000018 is correct
+# ------------------------------------------------
+# Write 0 to interrupt status and check tim_int and int_st
+# t=     28025 [TB_WRITE]: addr=00000018 data=00000000
+# --------------------------------------------------------
+# t=     28176 PASSED: interrupt is kept asserting
+# --------------------------------------------------------
+# t=     28325 [TB_READ]: addr=00000018 rdata=00000001
+# ------------------------------------------------
+# t=     28325 PASS: rdata = 00000001 at addr 00000018 is correct
+# ------------------------------------------------
+# Check counter continue counting when interrupt asserts
+# t=     41125 [TB_WRITE]: addr=00000000 data=00000000
+# t=     41425 [TB_READ]: addr=00000004 rdata=00000211
+# t=     41575 [TB_READ]: addr=00000008 rdata=00000000
+# ------------------------------------------------
+# t=     41575 PASSED: cnt matches expect value 
+# Expect:                  529
+# Actual:                  529
+# ------------------------------------------------
+# clear interrupt_en and check tim_int is masked
+# t=     41575 [TB_WRITE]: addr=00000014 data=00000000
+# --------------------------------------------------------
+# t=     41726 PASSED: interrupt is negated when disabled
+# --------------------------------------------------------
+# int_st still keeps 1
+# t=     41875 [TB_READ]: addr=00000018 rdata=00000001
+# ------------------------------------------------
+# t=     41875 PASS: rdata = 00000001 at addr 00000018 is correct
+# ------------------------------------------------
+# set interrupt_en again and check tim_int is asserted
+# t=     41875 [TB_WRITE]: addr=00000014 data=00000001
+# --------------------------------------------------------------------
+# t=     42026 PASSED: interrupt is asserted again when re-enable interrupt
+# --------------------------------------------------------------------
+# write int_st=1 and check interrupt and int_st
+# t=     42026 [TB_WRITE]: addr=00000018 data=00000001
+# --------------------------------------------------------
+# t=     42425 PASSED: interrupt is negated when write int_st=1 
+# --------------------------------------------------------
+# t=     42575 [TB_READ]: addr=00000018 rdata=00000000
+# ------------------------------------------------
+# t=     42575 PASS: rdata = 00000000 at addr 00000018 is correct
+# ------------------------------------------------
+# manual condition when generate interrupt by TDR0/1
+# t=     42575 [TB_WRITE]: addr=00000000 data=00000000
+# t=     42726 [TB_WRITE]: addr=00000004 data=00000000
+# t=     42876 [TB_WRITE]: addr=00000008 data=00000000
+# t=     43026 [TB_WRITE]: addr=00000014 data=00000000
+# t=     43176 [TB_WRITE]: addr=00000004 data=000000ff
+# --------------------------------------------------------
+# t=     43575 PASSED: interrupt is not asserted when int_en is 0
+# --------------------------------------------------------
+# Check interrupt status is 1
+# t=     43725 [TB_READ]: addr=00000018 rdata=00000001
+# ------------------------------------------------
+# t=     43725 PASS: rdata = 00000001 at addr 00000018 is correct
+# ------------------------------------------------
+# t=     43725 [TB_WRITE]: addr=00000014 data=00000001
+# --------------------------------------------------------
+# t=     43876 PASSED: interrupt is asserted
+# --------------------------------------------------------
+# write int_st=1 and check interrupt and int_st, should be kept
+# t=     43876 [TB_WRITE]: addr=00000018 data=00000001
+# --------------------------------------------------------
+# t=     44275 PASSED: interrupt is asserted in muanal mode
+# --------------------------------------------------------
+# Check interrupt status is 1
+# t=     44425 [TB_READ]: addr=00000018 rdata=00000001
+# ------------------------------------------------
+# t=     44425 PASS: rdata = 00000001 at addr 00000018 is correct
+# ------------------------------------------------
+# change TDR0 1 unit and check again
+# t=     44425 [TB_WRITE]: addr=00000004 data=000000fe
+# t=     44576 [TB_WRITE]: addr=00000018 data=00000001
+# --------------------------------------------------------
+# t=     44975 PASSED: interrupt is negated when write int_st=1 
+# --------------------------------------------------------
+# t=     45125 [TB_READ]: addr=00000018 rdata=00000000
+# ------------------------------------------------
+# t=     45125 PASS: rdata = 00000000 at addr 00000018 is correct
+# ------------------------------------------------
+# Test_result PASSED
+# ** Note: $finish    : ../tb/test_bench.v(84)
+#    Time: 45225 ns  Iteration: 0  Instance: /test_bench
+# End time: 22:04:47 on Jul 31,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

@@ -1,0 +1,74 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/ictc/student-data/duyquang/15_ss15/cov_practice/sim
+T_opt
+!s110 1730123339
+Vm9`V:e@N<;RhLNHZzJC6`0
+04 10 4 work test_bench fast 0
+=1-000ae431a4f1-671f964b-2276-1e70c1
+Z2 !s102 +cover=bcesft
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work +cover=bcesft
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vtest_bench
+Z4 2../rtl/top.v|../tb/test_bench.v
+Z5 !s110 1730123338
+!i10b 1
+!s100 o]8=ze:?Bz=[jZ;8Y>P<=2
+ID]:eNQ45ZbDA[Q^j7I=cP2
+R1
+w1730123283
+8../tb/test_bench.v
+F../tb/test_bench.v
+!i122 0
+L0 1 60
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z8 !s108 1730123338.000000
+Z9 !s107 ../tb/test_bench.v|../rtl/top.v|
+Z10 !s90 +cover=bcesft|-f|compile.f|
+!i113 0
+R2
+Z11 o+cover=bcesft -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vtop
+R4
+R5
+!i10b 1
+!s100 F?fla6e?6=4GQ=JE@lz>O1
+IcLJS8]P6kS`C5TNEH8z5L2
+R1
+w1730122841
+8../rtl/top.v
+F../rtl/top.v
+!i122 0
+L0 1 10
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R2
+R11
+R3

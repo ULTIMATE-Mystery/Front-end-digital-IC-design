@@ -1,0 +1,306 @@
+# vsim -debugDB -l reg_rw_chk.log -voptargs="+access" -assertdebug -c test_bench -do "log -r /*;run -all;" 
+# Start time: 22:04:34 on Jul 31,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-4308) Enabling visibility using +acc is recommended with debug flow.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test_bench(fast)
+# Loading work.timer_top(fast)
+# Loading work.apbif(fast)
+# Loading work.regset(fast)
+# Loading work.counter(fast)
+# Loading work.cnt_ctrl(fast)
+# Loading work.mod_golden_cnt(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# log -r /*
+# run -all
+# ====================================
+# ====== Test Case: check RW  ========
+# ====================================
+# *** TISR ***
+# t=       100 [TB_WRITE]: addr=00000018 data=00000000
+# t=       375 [TB_READ]: addr=00000018 rdata=00000000
+# ------------------------------------------------
+# t=       375 PASS: rdata = 00000000 at addr 00000018 is correct
+# ------------------------------------------------
+# t=       375 [TB_WRITE]: addr=00000018 data=ffffffff
+# t=       675 [TB_READ]: addr=00000018 rdata=00000000
+# ------------------------------------------------
+# t=       675 PASS: rdata = 00000000 at addr 00000018 is correct
+# ------------------------------------------------
+# t=       675 [TB_WRITE]: addr=00000018 data=55555555
+# t=       975 [TB_READ]: addr=00000018 rdata=00000000
+# ------------------------------------------------
+# t=       975 PASS: rdata = 00000000 at addr 00000018 is correct
+# ------------------------------------------------
+# t=       975 [TB_WRITE]: addr=00000018 data=aaaaaaaa
+# t=      1275 [TB_READ]: addr=00000018 rdata=00000000
+# ------------------------------------------------
+# t=      1275 PASS: rdata = 00000000 at addr 00000018 is correct
+# ------------------------------------------------
+# t=      1275 [TB_WRITE]: addr=00000018 data=5aa5a55a
+# t=      1575 [TB_READ]: addr=00000018 rdata=00000000
+# ------------------------------------------------
+# t=      1575 PASS: rdata = 00000000 at addr 00000018 is correct
+# ------------------------------------------------
+# *** TCR ***
+# t=      1575 [TB_WRITE]: addr=00000000 data=00000000
+# t=      1875 [TB_READ]: addr=00000000 rdata=00000000
+# ------------------------------------------------
+# t=      1875 PASS: rdata = 00000000 at addr 00000000 is correct
+# ------------------------------------------------
+# t=      1875 [TB_WRITE]: addr=00000000 data=ffffffff
+# t=      2175 [TB_READ]: addr=00000000 rdata=00000003
+# ------------------------------------------------
+# t=      2175 PASS: rdata = 00000003 at addr 00000000 is correct
+# ------------------------------------------------
+# t=      2175 [TB_WRITE]: addr=00000000 data=55555555
+# t=      2475 [TB_READ]: addr=00000000 rdata=00000501
+# ------------------------------------------------
+# t=      2475 PASS: rdata = 00000501 at addr 00000000 is correct
+# ------------------------------------------------
+# t=      2475 [TB_WRITE]: addr=00000000 data=aaaaaaaa
+# t=      2775 [TB_READ]: addr=00000000 rdata=00000502
+# ------------------------------------------------
+# t=      2775 PASS: rdata = 00000502 at addr 00000000 is correct
+# ------------------------------------------------
+# t=      2775 [TB_WRITE]: addr=00000000 data=5aa5a55a
+# t=      3075 [TB_READ]: addr=00000000 rdata=00000502
+# ------------------------------------------------
+# t=      3075 PASS: rdata = 00000502 at addr 00000000 is correct
+# ------------------------------------------------
+# div_val check
+# clear to all-0
+# t=      3075 [TB_WRITE]: addr=00000000 data=00000000
+# t=      3375 [TB_READ]: addr=00000000 rdata=00000000
+# ------------------------------------------------
+# t=      3375 PASS: rdata = 00000000 at addr 00000000 is correct
+# ------------------------------------------------
+# write div_val = 8
+# t=      3375 [TB_WRITE]: addr=00000000 data=00000800
+# t=      3675 [TB_READ]: addr=00000000 rdata=00000800
+# ------------------------------------------------
+# t=      3675 PASS: rdata = 00000800 at addr 00000000 is correct
+# ------------------------------------------------
+# write div_val = 9
+# t=      3675 [TB_WRITE]: addr=00000000 data=00000900
+# t=      3975 [TB_READ]: addr=00000000 rdata=00000800
+# ------------------------------------------------
+# t=      3975 PASS: rdata = 00000800 at addr 00000000 is correct
+# ------------------------------------------------
+# write div_val = 7
+# t=      3975 [TB_WRITE]: addr=00000000 data=00000700
+# t=      4275 [TB_READ]: addr=00000000 rdata=00000700
+# ------------------------------------------------
+# t=      4275 PASS: rdata = 00000700 at addr 00000000 is correct
+# ------------------------------------------------
+# *** TDR0 ***
+# t=      4275 [TB_WRITE]: addr=00000004 data=00000000
+# t=      4575 [TB_READ]: addr=00000004 rdata=00000000
+# ------------------------------------------------
+# t=      4575 PASS: rdata = 00000000 at addr 00000004 is correct
+# ------------------------------------------------
+# t=      4575 [TB_WRITE]: addr=00000004 data=ffffffff
+# t=      4875 [TB_READ]: addr=00000004 rdata=ffffffff
+# ------------------------------------------------
+# t=      4875 PASS: rdata = ffffffff at addr 00000004 is correct
+# ------------------------------------------------
+# t=      4875 [TB_WRITE]: addr=00000004 data=55555555
+# t=      5175 [TB_READ]: addr=00000004 rdata=55555555
+# ------------------------------------------------
+# t=      5175 PASS: rdata = 55555555 at addr 00000004 is correct
+# ------------------------------------------------
+# t=      5175 [TB_WRITE]: addr=00000004 data=aaaaaaaa
+# t=      5475 [TB_READ]: addr=00000004 rdata=aaaaaaaa
+# ------------------------------------------------
+# t=      5475 PASS: rdata = aaaaaaaa at addr 00000004 is correct
+# ------------------------------------------------
+# t=      5475 [TB_WRITE]: addr=00000004 data=5aa5a55a
+# t=      5775 [TB_READ]: addr=00000004 rdata=5aa5a55a
+# ------------------------------------------------
+# t=      5775 PASS: rdata = 5aa5a55a at addr 00000004 is correct
+# ------------------------------------------------
+# *** TDR1 ***
+# t=      5775 [TB_WRITE]: addr=00000008 data=00000000
+# t=      6075 [TB_READ]: addr=00000008 rdata=00000000
+# ------------------------------------------------
+# t=      6075 PASS: rdata = 00000000 at addr 00000008 is correct
+# ------------------------------------------------
+# t=      6075 [TB_WRITE]: addr=00000008 data=ffffffff
+# t=      6375 [TB_READ]: addr=00000008 rdata=ffffffff
+# ------------------------------------------------
+# t=      6375 PASS: rdata = ffffffff at addr 00000008 is correct
+# ------------------------------------------------
+# t=      6375 [TB_WRITE]: addr=00000008 data=55555555
+# t=      6675 [TB_READ]: addr=00000008 rdata=55555555
+# ------------------------------------------------
+# t=      6675 PASS: rdata = 55555555 at addr 00000008 is correct
+# ------------------------------------------------
+# t=      6675 [TB_WRITE]: addr=00000008 data=aaaaaaaa
+# t=      6975 [TB_READ]: addr=00000008 rdata=aaaaaaaa
+# ------------------------------------------------
+# t=      6975 PASS: rdata = aaaaaaaa at addr 00000008 is correct
+# ------------------------------------------------
+# t=      6975 [TB_WRITE]: addr=00000008 data=5aa5a55a
+# t=      7275 [TB_READ]: addr=00000008 rdata=5aa5a55a
+# ------------------------------------------------
+# t=      7275 PASS: rdata = 5aa5a55a at addr 00000008 is correct
+# ------------------------------------------------
+# *** TCMP0 ***
+# t=      7275 [TB_WRITE]: addr=0000000c data=00000000
+# t=      7575 [TB_READ]: addr=0000000c rdata=00000000
+# ------------------------------------------------
+# t=      7575 PASS: rdata = 00000000 at addr 0000000c is correct
+# ------------------------------------------------
+# t=      7575 [TB_WRITE]: addr=0000000c data=ffffffff
+# t=      7875 [TB_READ]: addr=0000000c rdata=ffffffff
+# ------------------------------------------------
+# t=      7875 PASS: rdata = ffffffff at addr 0000000c is correct
+# ------------------------------------------------
+# t=      7875 [TB_WRITE]: addr=0000000c data=55555555
+# t=      8175 [TB_READ]: addr=0000000c rdata=55555555
+# ------------------------------------------------
+# t=      8175 PASS: rdata = 55555555 at addr 0000000c is correct
+# ------------------------------------------------
+# t=      8175 [TB_WRITE]: addr=0000000c data=aaaaaaaa
+# t=      8475 [TB_READ]: addr=0000000c rdata=aaaaaaaa
+# ------------------------------------------------
+# t=      8475 PASS: rdata = aaaaaaaa at addr 0000000c is correct
+# ------------------------------------------------
+# t=      8475 [TB_WRITE]: addr=0000000c data=5aa5a55a
+# t=      8775 [TB_READ]: addr=0000000c rdata=5aa5a55a
+# ------------------------------------------------
+# t=      8775 PASS: rdata = 5aa5a55a at addr 0000000c is correct
+# ------------------------------------------------
+# *** TCMP1 ***
+# t=      8775 [TB_WRITE]: addr=00000010 data=00000000
+# t=      9075 [TB_READ]: addr=00000010 rdata=00000000
+# ------------------------------------------------
+# t=      9075 PASS: rdata = 00000000 at addr 00000010 is correct
+# ------------------------------------------------
+# t=      9075 [TB_WRITE]: addr=00000010 data=ffffffff
+# t=      9375 [TB_READ]: addr=00000010 rdata=ffffffff
+# ------------------------------------------------
+# t=      9375 PASS: rdata = ffffffff at addr 00000010 is correct
+# ------------------------------------------------
+# t=      9375 [TB_WRITE]: addr=00000010 data=55555555
+# t=      9675 [TB_READ]: addr=00000010 rdata=55555555
+# ------------------------------------------------
+# t=      9675 PASS: rdata = 55555555 at addr 00000010 is correct
+# ------------------------------------------------
+# t=      9675 [TB_WRITE]: addr=00000010 data=aaaaaaaa
+# t=      9975 [TB_READ]: addr=00000010 rdata=aaaaaaaa
+# ------------------------------------------------
+# t=      9975 PASS: rdata = aaaaaaaa at addr 00000010 is correct
+# ------------------------------------------------
+# t=      9975 [TB_WRITE]: addr=00000010 data=5aa5a55a
+# t=     10275 [TB_READ]: addr=00000010 rdata=5aa5a55a
+# ------------------------------------------------
+# t=     10275 PASS: rdata = 5aa5a55a at addr 00000010 is correct
+# ------------------------------------------------
+# *** TIER ***
+# t=     10275 [TB_WRITE]: addr=00000014 data=00000000
+# t=     10575 [TB_READ]: addr=00000014 rdata=00000000
+# ------------------------------------------------
+# t=     10575 PASS: rdata = 00000000 at addr 00000014 is correct
+# ------------------------------------------------
+# t=     10575 [TB_WRITE]: addr=00000014 data=ffffffff
+# t=     10875 [TB_READ]: addr=00000014 rdata=00000001
+# ------------------------------------------------
+# t=     10875 PASS: rdata = 00000001 at addr 00000014 is correct
+# ------------------------------------------------
+# t=     10875 [TB_WRITE]: addr=00000014 data=55555555
+# t=     11175 [TB_READ]: addr=00000014 rdata=00000001
+# ------------------------------------------------
+# t=     11175 PASS: rdata = 00000001 at addr 00000014 is correct
+# ------------------------------------------------
+# t=     11175 [TB_WRITE]: addr=00000014 data=aaaaaaaa
+# t=     11475 [TB_READ]: addr=00000014 rdata=00000000
+# ------------------------------------------------
+# t=     11475 PASS: rdata = 00000000 at addr 00000014 is correct
+# ------------------------------------------------
+# t=     11475 [TB_WRITE]: addr=00000014 data=5aa5a55a
+# t=     11775 [TB_READ]: addr=00000014 rdata=00000000
+# ------------------------------------------------
+# t=     11775 PASS: rdata = 00000000 at addr 00000014 is correct
+# ------------------------------------------------
+# *** THCSR ***
+# t=     11775 [TB_WRITE]: addr=0000001c data=00000000
+# t=     12075 [TB_READ]: addr=0000001c rdata=00000000
+# ------------------------------------------------
+# t=     12075 PASS: rdata = 00000000 at addr 0000001c is correct
+# ------------------------------------------------
+# t=     12075 [TB_WRITE]: addr=0000001c data=ffffffff
+# t=     12375 [TB_READ]: addr=0000001c rdata=00000001
+# ------------------------------------------------
+# t=     12375 PASS: rdata = 00000001 at addr 0000001c is correct
+# ------------------------------------------------
+# t=     12375 [TB_WRITE]: addr=0000001c data=55555555
+# t=     12675 [TB_READ]: addr=0000001c rdata=00000001
+# ------------------------------------------------
+# t=     12675 PASS: rdata = 00000001 at addr 0000001c is correct
+# ------------------------------------------------
+# t=     12675 [TB_WRITE]: addr=0000001c data=aaaaaaaa
+# t=     12975 [TB_READ]: addr=0000001c rdata=00000000
+# ------------------------------------------------
+# t=     12975 PASS: rdata = 00000000 at addr 0000001c is correct
+# ------------------------------------------------
+# t=     12975 [TB_WRITE]: addr=0000001c data=5aa5a55a
+# t=     13275 [TB_READ]: addr=0000001c rdata=00000000
+# ------------------------------------------------
+# t=     13275 PASS: rdata = 00000000 at addr 0000001c is correct
+# ------------------------------------------------
+# assert reset
+# release reset
+# check reg init
+# t=     13625 [TB_READ]: addr=00000000 rdata=00000100
+# ------------------------------------------------
+# t=     13625 PASS: rdata = 00000100 at addr 00000000 is correct
+# ------------------------------------------------
+# t=     13775 [TB_READ]: addr=00000004 rdata=00000000
+# ------------------------------------------------
+# t=     13775 PASS: rdata = 00000000 at addr 00000004 is correct
+# ------------------------------------------------
+# t=     13925 [TB_READ]: addr=00000008 rdata=00000000
+# ------------------------------------------------
+# t=     13925 PASS: rdata = 00000000 at addr 00000008 is correct
+# ------------------------------------------------
+# t=     14075 [TB_READ]: addr=0000000c rdata=ffffffff
+# ------------------------------------------------
+# t=     14075 PASS: rdata = ffffffff at addr 0000000c is correct
+# ------------------------------------------------
+# t=     14225 [TB_READ]: addr=00000010 rdata=ffffffff
+# ------------------------------------------------
+# t=     14225 PASS: rdata = ffffffff at addr 00000010 is correct
+# ------------------------------------------------
+# t=     14375 [TB_READ]: addr=00000014 rdata=00000000
+# ------------------------------------------------
+# t=     14375 PASS: rdata = 00000000 at addr 00000014 is correct
+# ------------------------------------------------
+# t=     14525 [TB_READ]: addr=00000018 rdata=00000000
+# ------------------------------------------------
+# t=     14525 PASS: rdata = 00000000 at addr 00000018 is correct
+# ------------------------------------------------
+# t=     14675 [TB_READ]: addr=0000001c rdata=00000000
+# ------------------------------------------------
+# t=     14675 PASS: rdata = 00000000 at addr 0000001c is correct
+# ------------------------------------------------
+# Test_result PASSED
+# ** Note: $finish    : ../tb/test_bench.v(84)
+#    Time: 14775 ns  Iteration: 0  Instance: /test_bench
+# End time: 22:04:34 on Jul 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1

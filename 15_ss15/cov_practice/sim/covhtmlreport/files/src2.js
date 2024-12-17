@@ -1,0 +1,2 @@
+var g_data = {"name":"../rtl/top.v","src":"module top (\n    input   wire a,\n    input   wire b,\n    input   wire c,\n    output  wire z \n);\n\n    assign z = a & (b | c);\n\nendmodule\n","lang":"verilog"};
+processSrcData(g_data);

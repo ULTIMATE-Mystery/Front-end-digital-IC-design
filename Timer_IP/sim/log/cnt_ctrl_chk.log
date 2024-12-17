@@ -1,0 +1,179 @@
+# vsim -coverage -l cnt_ctrl_chk.log -c testbench -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit cnt_ctrl_chk.ucdb; log -r /*;run -all" 
+# Start time: 21:34:01 on Dec 16,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "timer_apb_if(fast)".
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.testbench(fast)
+# coverage save -onexit cnt_ctrl_chk.ucdb
+#  log -r /*
+# run -all
+# ===================================
+# Test Case: Counter Control Check
+# ===================================
+# 
+# [Test ID 32] Counter works normally after timer_en toggle
+# ----------------------------------------
+# t = 18000 [TB WRITE]: addr=0x0000 data=00000003 strb=0001
+# ----------------------------------------
+# t = 538000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 553000 [TB READ]: addr=0x008
+# t = 564000 PASS: cnt = 0000000000000035 matches expect value
+# ----------------------------------------
+# t = 573000 [TB WRITE]: addr=0x0000 data=00000102 strb=1111
+# ----------------------------------------
+# t = 593000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 608000 [TB READ]: addr=0x008
+# t = 619000 PASS: cnt = 0000000000000000 matches expect value
+# ----------------------------------------
+# t = 628000 [TB WRITE]: addr=0x0000 data=00000202 strb=1111
+# ----------------------------------------
+# t = 648000 [TB WRITE]: addr=0x0000 data=00000203 strb=1111
+# ----------------------------------------
+# t = 678000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 693000 [TB READ]: addr=0x008
+# t = 704000 PASS: cnt = 0000000000000002 matches expect value
+# 
+# [Test ID 35] Counter default mode
+# ----------------------------------------
+# t = 713000 [TB WRITE]: addr=0x0000 data=00000202 strb=1111
+# ----------------------------------------
+# t = 733000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 853000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 868000 [TB READ]: addr=0x008
+# t = 879000 PASS: cnt = 000000000000001a matches expect value
+# 
+# [Test ID 36] Counter control mode div_val = 0
+# ----------------------------------------
+# t = 888000 [TB WRITE]: addr=0x0000 data=00000000 strb=1111
+# ----------------------------------------
+# t = 908000 [TB WRITE]: addr=0x0000 data=00000003 strb=1111
+# ----------------------------------------
+# t = 1028000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 1043000 [TB READ]: addr=0x008
+# t = 1054000 PASS: cnt = 000000000000001a matches expect value
+# 
+# [Test ID 37] Counter control mode div_val = 1
+# ----------------------------------------
+# t = 1063000 [TB WRITE]: addr=0x0000 data=00000002 strb=1111
+# ----------------------------------------
+# t = 1083000 [TB WRITE]: addr=0x0000 data=00000103 strb=1111
+# ----------------------------------------
+# t = 1303000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 1318000 [TB READ]: addr=0x008
+# t = 1329000 PASS: cnt = 0000000000000017 matches expect value
+# 
+# [Test ID 38] Counter control mode div_val = 2
+# ----------------------------------------
+# t = 1338000 [TB WRITE]: addr=0x0000 data=00000102 strb=1111
+# ----------------------------------------
+# t = 1358000 [TB WRITE]: addr=0x0000 data=00000203 strb=1111
+# ----------------------------------------
+# t = 1778000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 1793000 [TB READ]: addr=0x008
+# t = 1804000 PASS: cnt = 0000000000000015 matches expect value
+# 
+# [Test ID 39] Counter control mode div_val = 3
+# ----------------------------------------
+# t = 1813000 [TB WRITE]: addr=0x0000 data=00000202 strb=1111
+# ----------------------------------------
+# t = 1833000 [TB WRITE]: addr=0x0000 data=00000303 strb=1111
+# ----------------------------------------
+# t = 2653000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 2668000 [TB READ]: addr=0x008
+# t = 2679000 PASS: cnt = 0000000000000014 matches expect value
+# 
+# [Test ID 40] Counter control mode div_val = 4
+# ----------------------------------------
+# t = 2688000 [TB WRITE]: addr=0x0000 data=00000302 strb=1111
+# ----------------------------------------
+# t = 2708000 [TB WRITE]: addr=0x0000 data=00000403 strb=1111
+# ----------------------------------------
+# t = 4328000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 4343000 [TB READ]: addr=0x008
+# t = 4354000 PASS: cnt = 0000000000000014 matches expect value
+# 
+# [Test ID 41] Counter control mode div_val = 5
+# ----------------------------------------
+# t = 4363000 [TB WRITE]: addr=0x0000 data=00000402 strb=1111
+# ----------------------------------------
+# t = 4383000 [TB WRITE]: addr=0x0000 data=00000503 strb=1111
+# ----------------------------------------
+# t = 7603000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 7618000 [TB READ]: addr=0x008
+# t = 7629000 PASS: cnt = 0000000000000014 matches expect value
+# 
+# [Test ID 42] Counter control mode div_val = 6
+# ----------------------------------------
+# t = 7638000 [TB WRITE]: addr=0x0000 data=00000502 strb=1111
+# ----------------------------------------
+# t = 7658000 [TB WRITE]: addr=0x0000 data=00000603 strb=1111
+# ----------------------------------------
+# t = 14078000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 14093000 [TB READ]: addr=0x008
+# t = 14104000 PASS: cnt = 0000000000000014 matches expect value
+# 
+# [Test ID 43] Counter control mode div_val = 7
+# ----------------------------------------
+# t = 14113000 [TB WRITE]: addr=0x0000 data=00000602 strb=1111
+# ----------------------------------------
+# t = 14133000 [TB WRITE]: addr=0x0000 data=00000703 strb=1111
+# ----------------------------------------
+# t = 26953000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 26968000 [TB READ]: addr=0x008
+# t = 26979000 PASS: cnt = 0000000000000014 matches expect value
+# 
+# [Test ID 44] Counter control mode div_val = 8
+# ----------------------------------------
+# t = 26988000 [TB WRITE]: addr=0x0000 data=00000702 strb=1111
+# ----------------------------------------
+# t = 27008000 [TB WRITE]: addr=0x0000 data=00000803 strb=1111
+# ----------------------------------------
+# t = 52628000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 52643000 [TB READ]: addr=0x008
+# t = 52654000 PASS: cnt = 0000000000000014 matches expect value
+# 
+# [Test ID 45] Counter control mode invalid div_val
+# ----------------------------------------
+# t = 52663000 [TB WRITE]: addr=0x0000 data=00000802 strb=1111
+# ----------------------------------------
+# t = 52683000 [TB WRITE]: addr=0x0000 data=00000201 strb=1111
+# ----------------------------------------
+# t = 52803000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 52818000 [TB READ]: addr=0x008
+# t = 52829000 PASS: cnt = 000000000000001a matches expect value
+# ===================================
+# TEST RESULT: PASSED
+# ===================================
+# ** Note: $finish    : ../tb/testbench.v(297)
+#    Time: 53837500 ps  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 21:34:02 on Dec 16,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

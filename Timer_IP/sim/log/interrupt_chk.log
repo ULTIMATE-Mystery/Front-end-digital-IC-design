@@ -1,0 +1,210 @@
+# vsim -coverage -l interrupt_chk.log -c testbench -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit interrupt_chk.ucdb; log -r /*;run -all" 
+# Start time: 21:33:56 on Dec 16,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "timer_apb_if(fast)".
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.testbench(fast)
+# coverage save -onexit interrupt_chk.ucdb
+#  log -r /*
+# run -all
+# 
+# [Test] Counter continue counting normally when interrupt occurs
+# ----------------------------------------
+# t = 18000 [TB WRITE]: addr=0x000c data=000000ff strb=1111
+# ----------------------------------------
+# t = 38000 [TB WRITE]: addr=0x0010 data=00000000 strb=1111
+# ----------------------------------------
+# t = 58000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 78000 [TB WRITE]: addr=0x0014 data=00000001 strb=1111
+# ----------------------------------------
+# t = 1373000 PASS: Timer interrupt is asserted correctly
+# ----------------------------------------
+# t = 1758000 [TB READ]: addr=0x004
+# ----------------------------------------
+# t = 1773000 [TB READ]: addr=0x008
+# t = 1784000 PASS: cnt = 0000000000000156 matches expect value
+# 
+# [Test] After reset, timer can work normally
+# ----------------------------------------
+# t = 1793000 [TB WRITE]: addr=0x000c data=000000ed strb=1111
+# ----------------------------------------
+# t = 1813000 [TB WRITE]: addr=0x0010 data=00000000 strb=1111
+# ----------------------------------------
+# t = 1833000 [TB WRITE]: addr=0x0000 data=00000000 strb=1111
+# ----------------------------------------
+# t = 1853000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 3058000 PASS: Timer interrupt is asserted correctly
+# ----------------------------------------
+# t = 3073000 PASS: Interrupt is cleared correctly
+# ----------------------------------------
+# t = 3073000 [TB WRITE]: addr=0x000c data=000000ff strb=1111
+# ----------------------------------------
+# t = 3093000 [TB WRITE]: addr=0x0010 data=00000000 strb=1111
+# ----------------------------------------
+# t = 3113000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 3133000 [TB WRITE]: addr=0x0014 data=00000001 strb=1111
+# ----------------------------------------
+# t = 4428000 PASS: Timer interrupt is asserted correctly
+# 
+# [Test] Set condition for interrupt pending
+# ----------------------------------------
+# t = 4443000 [TB WRITE]: addr=0x000c data=000000ff strb=1111
+# ----------------------------------------
+# t = 4463000 [TB WRITE]: addr=0x0010 data=00000000 strb=1111
+# ----------------------------------------
+# t = 4483000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# t = 5778000 PASS: Interrupt output is not asserted
+# ----------------------------------------
+# t = 5778000 [TB READ]: addr=0x0018
+# t = 5789000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# 
+# [Test] Clear condition
+# ----------------------------------------
+# t = 5813000 [TB WRITE]: addr=0x000c data=000000ff strb=1111
+# ----------------------------------------
+# t = 5833000 [TB WRITE]: addr=0x0010 data=00000000 strb=1111
+# ----------------------------------------
+# t = 5853000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# t = 7148000 PASS: Interrupt output is not asserted
+# ----------------------------------------
+# t = 7148000 [TB READ]: addr=0x0018
+# t = 7159000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# ----------------------------------------
+# t = 7168000 [TB WRITE]: addr=0x0018 data=00000000 strb=1111
+# ----------------------------------------
+# t = 7188000 [TB READ]: addr=0x0018
+# t = 7199000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# ----------------------------------------
+# t = 7208000 [TB WRITE]: addr=0x0018 data=00000001 strb=1111
+# ----------------------------------------
+# t = 7228000 [TB READ]: addr=0x0018
+# t = 7239000 PASS: rdata = 00000000 at addr 0x0018 is correct
+# 
+# [Test] Manual condition
+# ----------------------------------------
+# t = 7263000 [TB WRITE]: addr=0x0004 data=ffffffff strb=1111
+# ----------------------------------------
+# t = 7283000 [TB WRITE]: addr=0x0008 data=ffffffff strb=1111
+# t = 7303000 PASS: Interrupt output is not asserted
+# ----------------------------------------
+# t = 7303000 [TB READ]: addr=0x0018
+# t = 7314000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# 
+# [Test] Interrupt enable
+# ----------------------------------------
+# t = 7338000 [TB WRITE]: addr=0x000c data=000000ff strb=1111
+# ----------------------------------------
+# t = 7358000 [TB WRITE]: addr=0x0010 data=00000000 strb=1111
+# ----------------------------------------
+# t = 7378000 [TB WRITE]: addr=0x0014 data=00000001 strb=1111
+# ----------------------------------------
+# t = 7398000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# t = 8698000 PASS: Interrupt is asserted correctly
+# ----------------------------------------
+# t = 8698000 [TB READ]: addr=0x0018
+# t = 8709000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# 
+# [Test] Clear condition
+# ----------------------------------------
+# t = 8733000 [TB WRITE]: addr=0x000c data=000000ff strb=1111
+# ----------------------------------------
+# t = 8753000 [TB WRITE]: addr=0x0010 data=00000000 strb=1111
+# ----------------------------------------
+# t = 8773000 [TB WRITE]: addr=0x0014 data=00000001 strb=1111
+# ----------------------------------------
+# t = 8793000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# t = 10093000 PASS: Interrupt is asserted correctly
+# ----------------------------------------
+# t = 10093000 [TB READ]: addr=0x0018
+# t = 10104000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# ----------------------------------------
+# t = 10113000 [TB WRITE]: addr=0x0018 data=00000000 strb=1111
+# ----------------------------------------
+# t = 10133000 [TB READ]: addr=0x0018
+# t = 10144000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# ----------------------------------------
+# t = 10153000 [TB WRITE]: addr=0x0018 data=00000001 strb=1111
+# ----------------------------------------
+# t = 10173000 [TB READ]: addr=0x0018
+# t = 10184000 PASS: rdata = 00000000 at addr 0x0018 is correct
+# ----------------------------------------
+# t = 10193000 PASS: Interrupt is cleared correctly
+# 
+# [Test] Manual condition
+# ----------------------------------------
+# t = 10208000 [TB WRITE]: addr=0x0004 data=ffffffff strb=1111
+# ----------------------------------------
+# t = 10228000 [TB WRITE]: addr=0x0008 data=ffffffff strb=1111
+# ----------------------------------------
+# t = 10248000 [TB WRITE]: addr=0x0014 data=00000001 strb=1111
+# ----------------------------------------
+# t = 10268000 PASS: Timer interrupt is asserted correctly
+# ----------------------------------------
+# t = 10268000 [TB READ]: addr=0x0018
+# t = 10279000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# 
+# [Test] Mask condition
+# ----------------------------------------
+# t = 10303000 [TB WRITE]: addr=0x000c data=000000ff strb=1111
+# ----------------------------------------
+# t = 10323000 [TB WRITE]: addr=0x0010 data=00000000 strb=1111
+# ----------------------------------------
+# t = 10343000 [TB WRITE]: addr=0x0014 data=00000001 strb=1111
+# ----------------------------------------
+# t = 10363000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# t = 11663000 PASS: Interrupt is asserted correctly
+# ----------------------------------------
+# t = 11663000 [TB READ]: addr=0x0018
+# t = 11674000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# ----------------------------------------
+# t = 11683000 [TB WRITE]: addr=0x0014 data=00000000 strb=1111
+# ----------------------------------------
+# t = 11703000 PASS: Interrupt is cleared correctly
+# ----------------------------------------
+# t = 11703000 [TB READ]: addr=0x0018
+# t = 11714000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# 
+# [Test] Once asserted, interrupt must be kept
+# ----------------------------------------
+# t = 11723000 [TB WRITE]: addr=0x000c data=000000ed strb=1111
+# ----------------------------------------
+# t = 11743000 [TB WRITE]: addr=0x0010 data=00000000 strb=1111
+# ----------------------------------------
+# t = 11763000 [TB WRITE]: addr=0x0014 data=00000001 strb=1111
+# ----------------------------------------
+# t = 11783000 [TB WRITE]: addr=0x0000 data=00000000 strb=1111
+# ----------------------------------------
+# t = 11803000 [TB WRITE]: addr=0x0000 data=00000001 strb=1111
+# ----------------------------------------
+# t = 13008000 PASS: Timer interrupt is asserted correctly
+# ----------------------------------------
+# t = 13008000 [TB WRITE]: addr=0x0000 data=00000000 strb=1111
+# ----------------------------------------
+# t = 13053000 PASS: Timer interrupt keeps HIGH
+# ----------------------------------------
+# t = 13053000 [TB READ]: addr=0x0018
+# t = 13064000 PASS: rdata = 00000001 at addr 0x0018 is correct
+# ===================================
+# TEST RESULT: PASSED
+# ===================================
+# ** Note: $finish    : ../tb/testbench.v(297)
+#    Time: 14072500 ps  Iteration: 0  Instance: /testbench
+# Saving coverage database on exit...
+# End time: 21:33:57 on Dec 16,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
