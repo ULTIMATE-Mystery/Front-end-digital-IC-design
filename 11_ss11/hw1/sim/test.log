@@ -1,0 +1,47 @@
+# vsim -debugDB -l test.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
+# Start time: 18:16:18 on Dec 23,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test_bench(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# log -r /*
+# run -all
+# Starting test sequence...
+# [t = 35000] Master write: addr=0x3524 data=0x8484d609
+# [t = 75000] Master write: addr=0x998d data=0x89375212
+# [t = 115000] Master read request:  addr=0xf176
+# [t = 175000] Master write: addr=0x24c6 data=0xd513d2aa
+# [t = 205000] Master read request:  addr=0xd612
+# [t = 245000] Master write: addr=0x4ec5 data=0xde8e28bd
+# [t = 295000] Master read request:  addr=0x6263
+# [t = 355000] Master write: addr=0xcc9d data=0x8983b813
+# [t = 395000] Master read request:  addr=0xdd6b
+# [t = 425000] Master read request:  addr=0x72cf
+# [t = 455000] Master read request:  addr=0xbdf2
+# [t = 505000] Master read request:  addr=0x1289
+# [t = 545000] Master write: addr=0x02bc data=0x85d79a0b
+# [t = 585000] Master read request:  addr=0x554f
+# [t = 645000] Master read request:  addr=0x9bf1
+# [t = 675000] Master write: addr=0xa18f data=0xdbcd60b7
+# [t = 735000] Master read request:  addr=0xc05b
+# [t = 765000] Master read request:  addr=0xfc51
+# [t = 805000] Master read request:  addr=0x5a77
+# [t = 835000] Master write: addr=0xe739 data=0xe9ebf6d3
+# Test sequence completed.
+# ** Note: $finish    : ../tb/test_bench.v(112)
+#    Time: 875 ns  Iteration: 1  Instance: /test_bench
+# End time: 18:16:19 on Dec 23,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

@@ -1,0 +1,61 @@
+# vsim -debugDB -l test.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
+# Start time: 18:12:03 on Dec 23,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test_bench(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# log -r /*
+# run -all
+# 
+# Starting test sequence...
+# [t = 35000] Master write: addr=0x3524 data=0x8484d609
+# [t = 115000] Master write: addr=0x8465 data=0x00f3e301
+# [t = 185000] Master read request: addr=0x57ed
+# [t = 215000] Slave read data return: 0xbbd27277
+# [t = 235000] Master write: addr=0x69f2 data=0xf4007ae8
+# [t = 295000] Master read request: addr=0x582d
+# [t = 325000] Slave read data return: 0xcecccc9d
+# [t = 365000] Master write: addr=0x380d data=0x359fdd6b
+# [t = 435000] Master read request: addr=0xe91d
+# [t = 475000] Slave read data return: 0x452e618a
+# [t = 515000] Master read request: addr=0xf378
+# [t = 545000] Slave read data return: 0x150fdd2a
+# [t = 585000] Master read request: addr=0x4185
+# [t = 615000] Slave read data return: 0x6c9c4bd9
+# [t = 665000] Master write: addr=0x559f data=0x7c6da9f8
+# [t = 765000] Master read request: addr=0xc05b
+# [t = 825000] Slave read data return: 0x061d7f0c
+# [t = 855000] Master read request: addr=0x5a77
+# [t = 905000] Slave read data return: 0xe9ebf6d3
+# [t = 925000] Master read request: addr=0x595b
+# [t = 965000] Slave read data return: 0xce2ff29c
+# [t = 1015000] Master write: addr=0x1773 data=0x9799a82f
+# [t = 1075000] Master read request: addr=0xfdf7
+# [t = 1125000] Slave read data return: 0xb29fb665
+# [t = 1175000] Master read request: addr=0x1979
+# [t = 1235000] Slave read data return: 0xcd5ebc9a
+# [t = 1275000] Master read request: addr=0xed56
+# [t = 1325000] Slave read data return: 0xdc2bc4b8
+# [t = 1355000] Master write: addr=0x2c04 data=0x6dcb69db
+# [t = 1435000] Master write: addr=0xe276 data=0x5b172db6
+# [t = 1495000] Master read request: addr=0x61f7
+# [t = 1535000] Slave read data return: 0x975c9c2e
+# 
+# Test sequence completed.
+# ** Note: $finish    : ../tb/test_bench.v(151)
+#    Time: 1565 ns  Iteration: 1  Instance: /test_bench
+# End time: 18:12:04 on Dec 23,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
