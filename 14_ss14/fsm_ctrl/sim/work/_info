@@ -1,0 +1,87 @@
+m255
+K4
+z2
+!s12c _opt1
+Z0 !s99 nomlopt
+!s12c _opt
+R0
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/ictc/student_data/duyquang/14_ss14/fsm_ctrl/sim
+T_opt
+!s110 1735106072
+Vke6zBW:`_hcQjOlaF@XzO3
+Z2 04 10 4 work test_bench fast 0
+=1-bc2411fb702e-676b9e18-1b7bb-3e2c68
+R0
+Z3 !s12b OEM100
+Z4 !s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -G MEALY_FSM=0 -debugdb +acc
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2023.3;77
+R1
+T_opt1
+!s110 1735106145
+V:o]<;KIUNPb<@HEDNfcdO1
+R2
+=1-bc2411fb702e-676b9e61-1e9e4-3e32ed
+R0
+R3
+R4
+o-quiet -auto_acc_if_foreign -work work -G MEALY_FSM=1 -debugdb +acc
+R5
+n@_opt1
+R6
+R1
+vfsm_ctrl
+Z7 2../rtl/fsm_ctrl.v|../tb/test_bench.v
+Z8 !s110 1735116077
+!i10b 1
+!s100 PGb9I@3jXeFV8l]iXij583
+I?Ac4JSc4=WZ0z]Xd1VBET1
+R1
+w1735105816
+8../rtl/fsm_ctrl.v
+F../rtl/fsm_ctrl.v
+!i122 9
+L0 1 45
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z11 !s108 1735116077.000000
+!s107 ../tb/test_bench.v|../rtl/fsm_ctrl.v|
+Z12 !s90 -f|compile.f|
+!i113 0
+Z13 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+vtest_bench
+R7
+R8
+!i10b 1
+!s100 cBV2^DB5zSj_e[O82HGBR3
+IfG8:K^<i?O8VC_X7:V3?d1
+R1
+w1735105174
+8../tb/test_bench.v
+F../tb/test_bench.v
+!i122 9
+L0 1 142
+R9
+R10
+r1
+!s85 0
+31
+R11
+Z14 !s107 ../tb/test_bench.v|../rtl/fsm_ctrl.v|
+R12
+!i113 0
+R13
+R5

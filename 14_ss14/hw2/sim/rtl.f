@@ -1,0 +1,1 @@
+../rtl/detect_string.v

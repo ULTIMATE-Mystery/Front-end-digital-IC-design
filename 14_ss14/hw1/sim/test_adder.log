@@ -1,0 +1,42 @@
+# vsim -debugDB -l test_adder.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" -GMEALY_FSM=0 
+# Start time: 17:03:10 on Dec 25,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test_bench(fast)
+# Loading work.detect_string(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# log -r /*
+# run -all
+# ------------------------------------------------
+# TB IS RUNNING WITH MEALY_FSM =           0
+# ------------------------------------------------
+# Test stream      [31:0]: 11001100101100101010110110101111
+# Expected matches [31:0]: 00000000000010000000001001000010
+# ------------------------------------------------
+# t =        676 PASSED: Pattern detected correctly in Moore FSM
+# ------------------------------------------------
+# t =       1176 PASSED: Pattern detected correctly in Moore FSM
+# ------------------------------------------------
+# t =       1326 PASSED: Pattern detected correctly in Moore FSM
+# ------------------------------------------------
+# t =       1576 PASSED: Pattern detected correctly in Moore FSM
+# ------------------------------------------------
+# t =       1675 PASSED: All sequence detections were correct!
+# ------------------------------------------------
+# ** Note: $finish    : ../tb/test_bench.v(118)
+#    Time: 1775 ns  Iteration: 0  Instance: /test_bench
+# End time: 17:03:11 on Dec 25,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

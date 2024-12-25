@@ -1,0 +1,124 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+Z2 !s12c _opt1
+R1
+R2
+R1
+R0
+R1
+Z3 !s12c _opt2
+R1
+R2
+R1
+R0
+R1
+R3
+R1
+R2
+R1
+R2
+R1
+R0
+R1
+R3
+R1
+R2
+R1
+R0
+R1
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z4 d/ictc/student_data/duyquang/14_ss14/hw2/sim
+T_opt
+!s110 1735121255
+VcaGEzecn`6gWlkn^6l7=43
+Z5 04 10 4 work test_bench fast 0
+=1-bc2411fb702e-676bd967-4d7f-31bef
+R1
+Z6 !s12b OEM100
+Z7 !s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -G MEALY_FSM=0 -G STR_LEN=22 -debugdb +acc
+Z8 tCvgOpt 0
+n@_opt
+Z9 OL;O;2023.3;77
+R4
+T_opt1
+!s110 1735121233
+V57_SaKk5FCJJmzG5En>030
+R5
+=1-bc2411fb702e-676bd951-87177-319ba
+R1
+R6
+R7
+o-quiet -auto_acc_if_foreign -work work -G MEALY_FSM=1 -G STR_LEN=22 -debugdb +acc
+R8
+n@_opt1
+R9
+R4
+T_opt2
+!s110 1735120785
+V;[EzcF[g>ohTbzKdP1ImL1
+R5
+=1-bc2411fb702e-676bd791-4d17b-2f00c
+R1
+R6
+R7
+o-quiet -auto_acc_if_foreign -work work -G MEALY_FSM=1 -G STR_LEN=12 -debugdb +acc
+R8
+n@_opt2
+R9
+R4
+vdetect_string
+Z10 2../rtl/detect_string.v|../tb/test_bench.v
+Z11 !s110 1735121334
+!i10b 1
+!s100 Wa9Y=Hh8BAVA07igFZaD]1
+I7jM^WaHLHNQLP;JTT7NmP3
+R4
+w1735112230
+8../rtl/detect_string.v
+F../rtl/detect_string.v
+!i122 20
+L0 1 52
+Z12 VDg1SIo80bB@j0V0VzS_@n1
+Z13 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z14 !s108 1735121334.000000
+!s107 ../tb/test_bench.v|../rtl/detect_string.v|
+Z15 !s90 -f|compile.f|
+!i113 0
+Z16 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
+vtest_bench
+R10
+R11
+!i10b 1
+!s100 e;LlCm<RoLWcidhY?JhZ63
+I9oEDnC^TI;1A=:=cHAj=[3
+R4
+w1735121216
+8../tb/test_bench.v
+F../tb/test_bench.v
+!i122 20
+L0 1 155
+R12
+R13
+r1
+!s85 0
+31
+R14
+Z17 !s107 ../tb/test_bench.v|../rtl/detect_string.v|
+R15
+!i113 0
+R16
+R8

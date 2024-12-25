@@ -1,0 +1,43 @@
+# vsim -debugDB -l test_adder.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" -GMEALY_FSM=1 -GSTR_LEN=22 
+# Start time: 17:08:54 on Dec 25,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test_bench(fast)
+# Loading work.detect_string(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# log -r /*
+# run -all
+# ------------------------------------------------
+# TB IS RUNNING WITH MEALY_FSM =           1
+# TESTING WITH STREAM LENGTH = 22 BITS
+# ------------------------------------------------
+# Test stream      [21:0]: 1011010101101101111110
+# Expected matches [21:0]: 0001000000100100100000
+# ------------------------------------------------
+# t =        226 PASSED: Pattern detected correctly in Mealy FSM
+# ------------------------------------------------
+# t =        576 PASSED: Pattern detected correctly in Mealy FSM
+# ------------------------------------------------
+# t =        726 PASSED: Pattern detected correctly in Mealy FSM
+# ------------------------------------------------
+# t =        876 PASSED: Pattern detected correctly in Mealy FSM
+# ------------------------------------------------
+# t =       1175 PASSED: All sequence detections were correct!
+# ------------------------------------------------
+# ** Note: $finish    : ../tb/test_bench.v(152)
+#    Time: 1275 ns  Iteration: 0  Instance: /test_bench
+# End time: 17:08:55 on Dec 25,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
