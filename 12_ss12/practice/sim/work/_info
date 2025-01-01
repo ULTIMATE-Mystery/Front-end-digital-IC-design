@@ -1,0 +1,235 @@
+m255
+K4
+z2
+Z0 !s12c _opt2
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+!s12c _opt1
+R1
+Z2 !s12c _opt
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z3 d/ictc/student-data/duyquang/10_ss10/param_full_adder/sim
+T_opt
+!s110 1729725249
+VB0SLd6bn_U7JW5@V0[3f=3
+Z4 04 10 4 work test_bench fast 0
+=1-000ae431a4f1-67198341-38d0f-19176e
+R1
+Z5 !s12b OEM100
+!s124 OEM10U98 
+Z6 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z7 tCvgOpt 0
+n@_opt
+Z8 OL;O;2023.3;77
+R3
+T_opt1
+!s110 1730416870
+V_DdO6glT>hh1ZB26QmP[@2
+R4
+=1-000ae431a4f1-672410e6-3f168-1df78
+R1
+R5
+!s124 OEM10U1 
+R6
+R7
+n@_opt1
+R8
+R3
+T_opt2
+!s110 1735733693
+VH2iGiDE;FnPVk@fHQmAaE3
+R4
+=1-bc2411fb702e-677531bd-7986c-2b3f7e
+R1
+R5
+!s124 OEM10U2 
+R6
+R7
+n@_opt2
+R8
+R3
+vfull_adder
+Z9 2../rtl/half_adder.v|../rtl/full_adder.v|../rtl/param_full_adder.v|../tb/test_bench.v
+Z10 !s110 1729725245
+!i10b 1
+!s100 Pl:]XBPPX2z1jXnXLG_NP3
+I:VRClNNk:5YK1I`:F^O042
+R3
+w1728473590
+8../rtl/full_adder.v
+F../rtl/full_adder.v
+!i122 20
+L0 1 30
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z13 !s108 1729725245.000000
+Z14 !s107 ../tb/test_bench.v|../rtl/param_full_adder.v|../rtl/full_adder.v|../rtl/half_adder.v|
+Z15 !s90 -f|compile.f|
+!i113 0
+Z16 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+vfull_adder_16b
+R9
+!s110 1729685270
+!i10b 1
+!s100 g@7mX0g;WO9Q=]b3?64UD0
+IQB=g>ZYcO?o2mg1Z=S48f2
+R3
+w1729684150
+Z17 8../rtl/param_full_adder.v
+Z18 F../rtl/param_full_adder.v
+!i122 1
+Z19 L0 1 32
+R11
+R12
+r1
+!s85 0
+31
+!s108 1729685270.000000
+R14
+R15
+!i113 0
+R16
+R7
+vhalf_adder
+R9
+R10
+!i10b 1
+!s100 RYd]LXVTCYUZ<^R4_20Pk3
+I>DO6LnJemiZjKMEoL45M[3
+R3
+w1728296497
+8../rtl/half_adder.v
+F../rtl/half_adder.v
+!i122 20
+L0 1 10
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R7
+vparam_full_adder
+R9
+R10
+!i10b 1
+!s100 ?R70JzJMZ]FYcGCNCdzKD3
+IkWK8a]ZjRiA>NU5e>A<oo1
+R3
+w1729688512
+R17
+R18
+!i122 20
+R19
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R7
+vregset
+Z20 2../rtl/regset.v|../tb/test_bench.v
+Z21 !s110 1735756266
+!i10b 1
+!s100 9N]DeKDoNYzD^19ahLCaR2
+InM@2FD8=3dae:5nme7SgC0
+Z22 d/ictc/student_data/duyquang/12_ss12/practice/sim
+w1735639175
+8../rtl/regset.v
+F../rtl/regset.v
+!i122 34
+L0 1 46
+R11
+R12
+r1
+!s85 0
+31
+Z23 !s108 1735756265.000000
+!s107 ../tb/test_bench.v|../rtl/regset.v|
+R15
+!i113 0
+R16
+R7
+vtest_bench
+R20
+R21
+!i10b 1
+!s100 0?aYHCXohcVTc8GUCM`B=3
+Ibh58d?h[GoPinzdJRgRFF2
+R22
+w1735733648
+Z24 8../tb/test_bench.v
+Z25 F../tb/test_bench.v
+!i122 34
+L0 3 174
+R11
+R12
+r1
+!s85 0
+31
+R23
+Z26 !s107 ../tb/test_bench.v|../rtl/regset.v|
+R15
+!i113 0
+R16
+R7
+vtest_bench_full_adder
+R9
+!s110 1729685751
+!i10b 1
+!s100 0HF?:4_ZAiK>U=9alEfSY3
+I<Fc6zSGokbXJFY39[S:nY3
+R3
+w1729685256
+R24
+R25
+!i122 4
+L0 3 56
+R11
+R12
+r1
+!s85 0
+31
+!s108 1729685751.000000
+R14
+R15
+!i113 0
+R16
+R7

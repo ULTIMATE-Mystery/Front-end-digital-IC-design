@@ -1,0 +1,124 @@
+# vsim -debugDB -l test.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
+# Start time: 01:50:37 on Jan 02,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test_bench(fast)
+# Loading work.counter_top(fast)
+# Loading work.regset(fast)
+# Loading work.counter(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# log -r /*
+# run -all
+# 
+# Counter with Register Interface Test
+# =====================================
+# 
+# Test 1: Reset Value Check
+# ----------------------------------------
+# t = 25000 [TB READ]: Address = 0x000
+# t = 26000 PASS: rdata = 0x00000000 at Address = 0x000 is correct
+# ----------------------------------------
+# t = 35000 [TB READ]: Address = 0x004
+# t = 36000 PASS: rdata = 0x00000000 at Address = 0x004 is correct
+# 
+# Test 2: Basic Counter Operation - Count Enable
+# ----------------------------------------
+# t = 45000 [TB WRITE]: Address = 0x000, Data = 0x00000001
+# ----------------------------------------
+# t = 155000 [TB READ]: Address = 0x004
+# t = 156000 PASS: rdata = 0x0000000a at Address = 0x004 is correct
+# 
+# Test 3: Counter Start/Stop Operation Test
+# ----------------------------------------
+# t = 165000 [TB WRITE]: Address = 0x000, Data = 0x00000000
+# ----------------------------------------
+# t = 225000 [TB READ]: Address = 0x004
+# t = 226000 PASS: rdata = 0x0000000c at Address = 0x004 is correct
+# ----------------------------------------
+# t = 235000 [TB WRITE]: Address = 0x000, Data = 0x00000001
+# ----------------------------------------
+# t = 345000 [TB READ]: Address = 0x004
+# t = 346000 PASS: rdata = 0x00000016 at Address = 0x004 is correct
+# 
+# Test 4: Counter Clear Operation Test
+# ----------------------------------------
+# t = 355000 [TB WRITE]: Address = 0x000, Data = 0x00000002
+# ----------------------------------------
+# t = 375000 [TB READ]: Address = 0x004
+# t = 376000 PASS: rdata = 0x00000000 at Address = 0x004 is correct
+# ----------------------------------------
+# t = 435000 [TB READ]: Address = 0x004
+# t = 436000 PASS: rdata = 0x00000000 at Address = 0x004 is correct
+# 
+# Test 5: Full Counting Sequence and Overflow Test
+# ----------------------------------------
+# t = 445000 [TB WRITE]: Address = 0x000, Data = 0x00000001
+# ----------------------------------------
+# t = 3006000 PASS: Overflow is asserted
+# ----------------------------------------
+# t = 3006000 [TB READ]: Address = 0x004
+# t = 3007000 PASS: rdata = 0x000000ff at Address = 0x004 is correct
+# ----------------------------------------
+# t = 3016000 PASS: Overflow is negated
+# ----------------------------------------
+# t = 3016000 [TB READ]: Address = 0x004
+# t = 3017000 PASS: rdata = 0x00000000 at Address = 0x004 is correct
+# ----------------------------------------
+# t = 3125000 [TB READ]: Address = 0x004
+# t = 3126000 PASS: rdata = 0x0000000b at Address = 0x004 is correct
+# 
+# Test 6: Counter Clear Priority Test
+# ----------------------------------------
+# t = 3135000 [TB WRITE]: Address = 0x000, Data = 0x00000003
+# ----------------------------------------
+# t = 3245000 [TB READ]: Address = 0x004
+# t = 3246000 PASS: rdata = 0x00000000 at Address = 0x004 is correct
+# 
+# Test 7: Register Access Test
+# ----------------------------------------
+# t = 3255000 [TB WRITE]: Address = 0x004, Data = 0xffffffff
+# ----------------------------------------
+# t = 3265000 [TB READ]: Address = 0x004
+# t = 3266000 PASS: rdata = 0x00000000 at Address = 0x004 is correct
+# ----------------------------------------
+# t = 3275000 [TB WRITE]: Address = 0x000, Data = 0xffffffff
+# ----------------------------------------
+# t = 3285000 [TB READ]: Address = 0x000
+# t = 3286000 PASS: rdata = 0x00000003 at Address = 0x000 is correct
+# 
+# Test 8: Unmapped Register Access Test
+# ----------------------------------------
+# t = 3295000 [TB WRITE]: Address = 0x008, Data = 0xffffffff
+# ----------------------------------------
+# t = 3305000 [TB READ]: Address = 0x008
+# t = 3306000 PASS: rdata = 0x00000000 at Address = 0x008 is correct
+# ----------------------------------------
+# t = 3315000 [TB WRITE]: Address = 0x100, Data = 0xffffffff
+# ----------------------------------------
+# t = 3325000 [TB READ]: Address = 0x100
+# t = 3326000 PASS: rdata = 0x00000000 at Address = 0x100 is correct
+# 
+# =====================================
+# Test Summary:
+#   Total Tests    : 15
+#   Failed Tests   : 0
+#   Overall Status : PASSED
+# =====================================
+# 
+# ** Note: $finish    : ../tb/test_bench.v(208)
+#    Time: 3435 ns  Iteration: 0  Instance: /test_bench
+# End time: 01:50:37 on Jan 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

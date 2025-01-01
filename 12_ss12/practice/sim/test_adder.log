@@ -1,0 +1,95 @@
+# vsim -debugDB -l test_adder.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
+# Start time: 01:31:12 on Jan 02,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test_bench(fast)
+# Loading work.regset(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# log -r /*
+# run -all
+# 
+# Register Module Test
+# =====================================
+# 
+# Test 1: Reset Value Check
+# ----------------------------------------
+# t = 25000 [TB READ]: Address = 0x000
+# t = 26000 PASS: rdata = 0x00000000 at Address = 0x000 is correct
+# ----------------------------------------
+# t = 45000 [TB READ]: Address = 0x004
+# t = 46000 PASS: rdata = 0x00000000 at Address = 0x004 is correct
+# 
+# Test 2: Basic Write/Read Test
+# ----------------------------------------
+# t = 65000 [TB WRITE]: Address = 0x000, Data = 0xaaaa5555
+# ----------------------------------------
+# t = 85000 [TB READ]: Address = 0x000
+# t = 86000 PASS: rdata = 0xaaaa5555 at Address = 0x000 is correct
+# ----------------------------------------
+# t = 105000 [TB READ]: Address = 0x004
+# t = 106000 PASS: rdata = 0xaaaa5555 at Address = 0x004 is correct
+# 
+# Test 3: Write to Read-Only Register
+# ----------------------------------------
+# t = 125000 [TB WRITE]: Address = 0x004, Data = 0xffffffff
+# ----------------------------------------
+# t = 145000 [TB READ]: Address = 0x004
+# t = 146000 PASS: rdata = 0xaaaa5555 at Address = 0x004 is correct
+# ----------------------------------------
+# t = 165000 [TB READ]: Address = 0x000
+# t = 166000 PASS: rdata = 0xaaaa5555 at Address = 0x000 is correct
+# 
+# Test 4: Invalid Address Access
+# ----------------------------------------
+# t = 185000 [TB READ]: Address = 0x008
+# t = 186000 PASS: rdata = 0x00000000 at Address = 0x008 is correct
+# ----------------------------------------
+# t = 205000 [TB READ]: Address = 0x100
+# t = 206000 PASS: rdata = 0x00000000 at Address = 0x100 is correct
+# 
+# Test 5: Continuous Write/Read Operations Test with Timing Check
+# ----------------------------------------
+# t = 225000 [TB WRITE]: Address = 0x000, Data = 0x11112222
+# ----------------------------------------
+# t = 235000 [TB WRITE]: Address = 0x000, Data = 0x55556666
+# ----------------------------------------
+# t = 245000 [TB READ]: Address = 0x000
+# t = 246000 PASS: rdata = 0x55556666 at Address = 0x000 is correct
+# ----------------------------------------
+# t = 255000 [TB READ]: Address = 0x004
+# t = 256000 PASS: rdata = 0x55556666 at Address = 0x004 is correct
+# ----------------------------------------
+# t = 275000 [TB WRITE]: Address = 0x000, Data = 0x9999aaaa
+# ----------------------------------------
+# t = 285000 [TB READ]: Address = 0x000
+# t = 286000 PASS: rdata = 0x9999aaaa at Address = 0x000 is correct
+# ----------------------------------------
+# t = 295000 [TB WRITE]: Address = 0x004, Data = 0x12345678
+# ----------------------------------------
+# t = 305000 [TB READ]: Address = 0x004
+# t = 306000 PASS: rdata = 0x9999aaaa at Address = 0x004 is correct
+# 
+# =====================================
+# Test Summary:
+#   Total Tests    : 12
+#   Failed Tests   : 0
+#   Overall Status : PASSED
+# =====================================
+# 
+# ** Note: $finish    : ../tb/test_bench.v(166)
+#    Time: 415 ns  Iteration: 0  Instance: /test_bench
+# End time: 01:31:12 on Jan 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

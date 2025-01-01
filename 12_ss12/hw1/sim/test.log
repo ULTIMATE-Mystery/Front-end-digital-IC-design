@@ -1,0 +1,134 @@
+# vsim -debugDB -l test.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
+# Start time: 01:31:42 on Jan 02,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test_bench(fast)
+# Loading work.regset(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# log -r /*
+# run -all
+# 
+# Register Module Test
+# ================================
+# 
+# Test 1: Reset Value Check
+# ----------------------------------------
+# t = 25000 [TB READ]: Address = 0x000
+# t = 26000 PASS: rdata = 0x00000000 at Address = 0x000 is correct
+# ----------------------------------------
+# t = 45000 [TB READ]: Address = 0x004
+# t = 46000 PASS: rdata = 0x00000000 at Address = 0x004 is correct
+# ----------------------------------------
+# t = 65000 [TB READ]: Address = 0x008
+# t = 66000 PASS: rdata = 0xffffffff at Address = 0x008 is correct
+# ----------------------------------------
+# t = 85000 [TB READ]: Address = 0x00c
+# t = 86000 PASS: rdata = 0xffffffff at Address = 0x00c is correct
+# 
+# Test 2: Basic Write/Read Test
+# ----------------------------------------
+# t = 105000 [TB WRITE]: Address = 0x000, Data = 0xdeadbeef
+# ----------------------------------------
+# t = 125000 [TB READ]: Address = 0x000
+# t = 126000 PASS: rdata = 0xdeadbeef at Address = 0x000 is correct
+# ----------------------------------------
+# t = 145000 [TB READ]: Address = 0x004
+# t = 146000 PASS: rdata = 0xdeadbeef at Address = 0x004 is correct
+# ----------------------------------------
+# t = 165000 [TB WRITE]: Address = 0x008, Data = 0xcafebabe
+# ----------------------------------------
+# t = 185000 [TB READ]: Address = 0x008
+# t = 186000 PASS: rdata = 0xcafebabe at Address = 0x008 is correct
+# ----------------------------------------
+# t = 205000 [TB READ]: Address = 0x00c
+# t = 206000 PASS: rdata = 0xcafebabe at Address = 0x00c is correct
+# 
+# Test 3: Write to Read-Only Register
+# ----------------------------------------
+# t = 225000 [TB WRITE]: Address = 0x004, Data = 0x12345678
+# ----------------------------------------
+# t = 245000 [TB READ]: Address = 0x004
+# t = 246000 PASS: rdata = 0xdeadbeef at Address = 0x004 is correct
+# ----------------------------------------
+# t = 265000 [TB WRITE]: Address = 0x00c, Data = 0x87654321
+# ----------------------------------------
+# t = 285000 [TB READ]: Address = 0x00c
+# t = 286000 PASS: rdata = 0xcafebabe at Address = 0x00c is correct
+# 
+# Test 4: Unmapped Register Address Access
+# ----------------------------------------
+# t = 305000 [TB READ]: Address = 0x001
+# t = 306000 PASS: rdata = 0x00000000 at Address = 0x001 is correct
+# ----------------------------------------
+# t = 325000 [TB READ]: Address = 0x007
+# t = 326000 PASS: rdata = 0x00000000 at Address = 0x007 is correct
+# ----------------------------------------
+# t = 345000 [TB READ]: Address = 0x100
+# t = 346000 PASS: rdata = 0x00000000 at Address = 0x100 is correct
+# 
+# Test 5: Continuous Write/Read Operations Test with Timing Check
+# ----------------------------------------
+# t = 365000 [TB WRITE]: Address = 0x000, Data = 0x11112222
+# ----------------------------------------
+# t = 375000 [TB WRITE]: Address = 0x008, Data = 0x33334444
+# ----------------------------------------
+# t = 385000 [TB WRITE]: Address = 0x000, Data = 0x55556666
+# ----------------------------------------
+# t = 395000 [TB WRITE]: Address = 0x008, Data = 0x77778888
+# ----------------------------------------
+# t = 405000 [TB READ]: Address = 0x000
+# t = 406000 PASS: rdata = 0x55556666 at Address = 0x000 is correct
+# ----------------------------------------
+# t = 415000 [TB READ]: Address = 0x004
+# t = 416000 PASS: rdata = 0x55556666 at Address = 0x004 is correct
+# ----------------------------------------
+# t = 425000 [TB READ]: Address = 0x008
+# t = 426000 PASS: rdata = 0x77778888 at Address = 0x008 is correct
+# ----------------------------------------
+# t = 435000 [TB READ]: Address = 0x00c
+# t = 436000 PASS: rdata = 0x77778888 at Address = 0x00c is correct
+# ----------------------------------------
+# t = 455000 [TB WRITE]: Address = 0x000, Data = 0x9999aaaa
+# ----------------------------------------
+# t = 465000 [TB READ]: Address = 0x000
+# t = 466000 PASS: rdata = 0x9999aaaa at Address = 0x000 is correct
+# ----------------------------------------
+# t = 475000 [TB WRITE]: Address = 0x004, Data = 0x12345678
+# ----------------------------------------
+# t = 485000 [TB READ]: Address = 0x004
+# t = 486000 PASS: rdata = 0x9999aaaa at Address = 0x004 is correct
+# ----------------------------------------
+# t = 495000 [TB WRITE]: Address = 0x008, Data = 0xbbbbcccc
+# ----------------------------------------
+# t = 505000 [TB READ]: Address = 0x008
+# t = 506000 PASS: rdata = 0xbbbbcccc at Address = 0x008 is correct
+# ----------------------------------------
+# t = 515000 [TB WRITE]: Address = 0x00c, Data = 0x12345678
+# ----------------------------------------
+# t = 525000 [TB READ]: Address = 0x00c
+# t = 526000 PASS: rdata = 0xbbbbcccc at Address = 0x00c is correct
+# 
+# ================================
+# Test Summary:
+#   Total Tests    : 21
+#   Failed Tests   : 0
+#   Overall Status : PASSED
+# ================================
+# 
+# ** Note: $finish    : ../tb/test_bench.v(194)
+#    Time: 635 ns  Iteration: 0  Instance: /test_bench
+# End time: 01:31:42 on Jan 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
