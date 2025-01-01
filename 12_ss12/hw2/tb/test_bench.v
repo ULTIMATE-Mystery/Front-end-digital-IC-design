@@ -161,6 +161,7 @@ module test_bench;
         end else begin
             $display("----------------------------------------");
             $display("t = %0t PASS: Overflow is asserted", $time);
+            test_count = test_count + 1;
         end
         read_check(STATUS_REG, 32'hFF); #1;
         if (overflow) begin
@@ -172,6 +173,7 @@ module test_bench;
         end else begin
             $display("----------------------------------------");
             $display("t = %0t PASS: Overflow is negated", $time);
+            test_count = test_count + 1;
         end
         read_check(STATUS_REG, 32'h0);    // Verify counter wrapped to 0       
         wait_cycles(10);

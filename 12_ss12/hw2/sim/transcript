@@ -18,5 +18,3 @@
 # decimal
 # 
 # stdin: <EOF>
-add schematic -full vsim:/test_bench
-add schematic -full vsim:/test_bench

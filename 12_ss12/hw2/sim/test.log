@@ -1,6 +1,9 @@
 # vsim -debugDB -l test.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
-# Start time: 01:50:37 on Jan 02,2025
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 03:36:24 on Jan 02,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2023.3 linux_x86_64 Jul 17 2023
 # //
@@ -19,7 +22,7 @@
 # Loading work.counter_top(fast)
 # Loading work.regset(fast)
 # Loading work.counter(fast)
-# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
 # log -r /*
 # run -all
 # 
@@ -113,12 +116,12 @@
 # 
 # =====================================
 # Test Summary:
-#   Total Tests    : 15
+#   Total Tests    : 17
 #   Failed Tests   : 0
 #   Overall Status : PASSED
 # =====================================
 # 
-# ** Note: $finish    : ../tb/test_bench.v(208)
+# ** Note: $finish    : ../tb/test_bench.v(210)
 #    Time: 3435 ns  Iteration: 0  Instance: /test_bench
-# End time: 01:50:37 on Jan 02,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# End time: 03:36:25 on Jan 02,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
