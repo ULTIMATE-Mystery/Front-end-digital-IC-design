@@ -1,10 +1,10 @@
 Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-Start time: 03:35:05 on Jan 02,2025
+Start time: 02:46:22 on Jan 03,2025
 vlog -f compile.f 
 -- Compiling module regset
 -- Compiling module test_bench
 
 Top level modules:
 	test_bench
-End time: 03:35:05 on Jan 02,2025, Elapsed time: 0:00:00
+End time: 02:46:22 on Jan 03,2025, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0

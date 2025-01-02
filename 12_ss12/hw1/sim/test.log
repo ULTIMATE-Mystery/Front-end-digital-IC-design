@@ -1,5 +1,5 @@
 # vsim -debugDB -l test.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
-# Start time: 03:35:39 on Jan 02,2025
+# Start time: 02:46:27 on Jan 03,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
@@ -73,65 +73,93 @@
 # 
 # Test 4: Unmapped Register Address Access
 # ----------------------------------------
-# t = 305000 [TB READ]: Address = 0x001
-# t = 306000 PASS: rdata = 0x00000000 at Address = 0x001 is correct
+# t = 305000 [TB WRITE]: Address = 0x001, Data = 0xffffffff
 # ----------------------------------------
-# t = 325000 [TB READ]: Address = 0x007
-# t = 326000 PASS: rdata = 0x00000000 at Address = 0x007 is correct
+# t = 325000 [TB READ]: Address = 0x001
+# t = 326000 PASS: rdata = 0x00000000 at Address = 0x001 is correct
 # ----------------------------------------
-# t = 345000 [TB READ]: Address = 0x100
-# t = 346000 PASS: rdata = 0x00000000 at Address = 0x100 is correct
+# t = 345000 [TB WRITE]: Address = 0x007, Data = 0xffffffff
+# ----------------------------------------
+# t = 365000 [TB READ]: Address = 0x007
+# t = 366000 PASS: rdata = 0x00000000 at Address = 0x007 is correct
+# ----------------------------------------
+# t = 385000 [TB WRITE]: Address = 0x100, Data = 0xffffffff
+# ----------------------------------------
+# t = 405000 [TB READ]: Address = 0x100
+# t = 406000 PASS: rdata = 0x00000000 at Address = 0x100 is correct
 # 
 # Test 5: Continuous Write/Read Operations Test with Timing Check
 # ----------------------------------------
-# t = 365000 [TB WRITE]: Address = 0x000, Data = 0x11112222
+# t = 425000 [TB WRITE]: Address = 0x000, Data = 0x11112222
 # ----------------------------------------
-# t = 375000 [TB WRITE]: Address = 0x008, Data = 0x33334444
+# t = 435000 [TB WRITE]: Address = 0x008, Data = 0x33334444
 # ----------------------------------------
-# t = 385000 [TB WRITE]: Address = 0x000, Data = 0x55556666
+# t = 445000 [TB WRITE]: Address = 0x000, Data = 0x55556666
 # ----------------------------------------
-# t = 395000 [TB WRITE]: Address = 0x008, Data = 0x77778888
-# ----------------------------------------
-# t = 405000 [TB READ]: Address = 0x000
-# t = 406000 PASS: rdata = 0x55556666 at Address = 0x000 is correct
-# ----------------------------------------
-# t = 415000 [TB READ]: Address = 0x004
-# t = 416000 PASS: rdata = 0x55556666 at Address = 0x004 is correct
-# ----------------------------------------
-# t = 425000 [TB READ]: Address = 0x008
-# t = 426000 PASS: rdata = 0x77778888 at Address = 0x008 is correct
-# ----------------------------------------
-# t = 435000 [TB READ]: Address = 0x00c
-# t = 436000 PASS: rdata = 0x77778888 at Address = 0x00c is correct
-# ----------------------------------------
-# t = 455000 [TB WRITE]: Address = 0x000, Data = 0x9999aaaa
+# t = 455000 [TB WRITE]: Address = 0x008, Data = 0x77778888
 # ----------------------------------------
 # t = 465000 [TB READ]: Address = 0x000
-# t = 466000 PASS: rdata = 0x9999aaaa at Address = 0x000 is correct
+# t = 466000 PASS: rdata = 0x55556666 at Address = 0x000 is correct
 # ----------------------------------------
-# t = 475000 [TB WRITE]: Address = 0x004, Data = 0x12345678
+# t = 475000 [TB READ]: Address = 0x004
+# t = 476000 PASS: rdata = 0x55556666 at Address = 0x004 is correct
 # ----------------------------------------
-# t = 485000 [TB READ]: Address = 0x004
-# t = 486000 PASS: rdata = 0x9999aaaa at Address = 0x004 is correct
+# t = 485000 [TB READ]: Address = 0x008
+# t = 486000 PASS: rdata = 0x77778888 at Address = 0x008 is correct
 # ----------------------------------------
-# t = 495000 [TB WRITE]: Address = 0x008, Data = 0xbbbbcccc
+# t = 495000 [TB READ]: Address = 0x00c
+# t = 496000 PASS: rdata = 0x77778888 at Address = 0x00c is correct
 # ----------------------------------------
-# t = 505000 [TB READ]: Address = 0x008
-# t = 506000 PASS: rdata = 0xbbbbcccc at Address = 0x008 is correct
+# t = 515000 [TB WRITE]: Address = 0x000, Data = 0x9999aaaa
 # ----------------------------------------
-# t = 515000 [TB WRITE]: Address = 0x00c, Data = 0x12345678
+# t = 525000 [TB READ]: Address = 0x000
+# t = 526000 PASS: rdata = 0x9999aaaa at Address = 0x000 is correct
 # ----------------------------------------
-# t = 525000 [TB READ]: Address = 0x00c
-# t = 526000 PASS: rdata = 0xbbbbcccc at Address = 0x00c is correct
+# t = 535000 [TB WRITE]: Address = 0x004, Data = 0x12345678
+# ----------------------------------------
+# t = 545000 [TB READ]: Address = 0x004
+# t = 546000 PASS: rdata = 0x9999aaaa at Address = 0x004 is correct
+# ----------------------------------------
+# t = 555000 [TB WRITE]: Address = 0x008, Data = 0xbbbbcccc
+# ----------------------------------------
+# t = 565000 [TB READ]: Address = 0x008
+# t = 566000 PASS: rdata = 0xbbbbcccc at Address = 0x008 is correct
+# ----------------------------------------
+# t = 575000 [TB WRITE]: Address = 0x00c, Data = 0x12345678
+# ----------------------------------------
+# t = 585000 [TB READ]: Address = 0x00c
+# t = 586000 PASS: rdata = 0xbbbbcccc at Address = 0x00c is correct
+# 
+# Test 6: One-hot check
+# ----------------------------------------
+# t = 605000 [TB WRITE]: Address = 0x000, Data = 0x88888888
+# ----------------------------------------
+# t = 625000 [TB WRITE]: Address = 0x004, Data = 0x77777777
+# ----------------------------------------
+# t = 645000 [TB WRITE]: Address = 0x008, Data = 0x66666666
+# ----------------------------------------
+# t = 665000 [TB WRITE]: Address = 0x00c, Data = 0x55555555
+# ----------------------------------------
+# t = 685000 [TB READ]: Address = 0x000
+# t = 686000 PASS: rdata = 0x88888888 at Address = 0x000 is correct
+# ----------------------------------------
+# t = 705000 [TB READ]: Address = 0x004
+# t = 706000 PASS: rdata = 0x88888888 at Address = 0x004 is correct
+# ----------------------------------------
+# t = 725000 [TB READ]: Address = 0x008
+# t = 726000 PASS: rdata = 0x66666666 at Address = 0x008 is correct
+# ----------------------------------------
+# t = 745000 [TB READ]: Address = 0x00c
+# t = 746000 PASS: rdata = 0x66666666 at Address = 0x00c is correct
 # 
 # ================================
 # Test Summary:
-#   Total Tests    : 21
+#   Total Tests    : 25
 #   Failed Tests   : 0
 #   Overall Status : PASSED
 # ================================
 # 
-# ** Note: $finish    : ../tb/test_bench.v(194)
-#    Time: 635 ns  Iteration: 0  Instance: /test_bench
-# End time: 03:35:40 on Jan 02,2025, Elapsed time: 0:00:01
+# ** Note: $finish    : ../tb/test_bench.v(219)
+#    Time: 855 ns  Iteration: 0  Instance: /test_bench
+# End time: 02:46:27 on Jan 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1

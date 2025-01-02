@@ -12,10 +12,10 @@ Z0 !s99 nomlopt
 cModel Technology
 Z1 d/ictc/student_data/duyquang/12_ss12/hw1/sim
 T_opt
-!s110 1735763739
-VQ>k1fgo<U]H7o0RNbLP]=0
+!s110 1735847187
+VX>5?EFBiRc]SINmb?B81a3
 04 10 4 work test_bench fast 0
-=1-bc2411fb702e-6775a71b-a0fcc-383233
+=1-bc2411fb702e-6776ed13-24bba-1d3230
 R0
 !s12b OEM100
 !s124 OEM10U2 
@@ -25,7 +25,7 @@ n@_opt
 OL;O;2023.3;77
 vregset
 Z3 2../rtl/regset.v|../tb/test_bench.v
-Z4 !s110 1735763705
+Z4 !s110 1735847182
 !i10b 1
 !s100 Tk_1A>X4Ec9]`93XnXJd93
 IO6Li`C3HaSmo^07VVYBmZ2
@@ -40,7 +40,7 @@ Z6 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z7 !s108 1735763705.000000
+Z7 !s108 1735847182.000000
 Z8 !s107 ../tb/test_bench.v|../rtl/regset.v|
 Z9 !s90 -f|compile.f|
 !i113 0
@@ -50,14 +50,14 @@ vtest_bench
 R3
 R4
 !i10b 1
-!s100 Lk^fn=CaVhCjP;FCSBGZi2
-I8<W@Gn2RI7B9eY;;3ORYW3
+!s100 j`je?];E^K8Wa;Uk0_:Sm3
+I7;EFE791[G2O9G`90LIJC3
 R1
-w1735732889
+w1735844592
 8../tb/test_bench.v
 F../tb/test_bench.v
 !i122 0
-L0 3 202
+L0 3 227
 R5
 R6
 r1
