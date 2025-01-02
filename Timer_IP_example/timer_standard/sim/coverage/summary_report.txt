@@ -1,0 +1,76 @@
+Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /test_bench/u_timer/u_apbif
+=== Design Unit: work.apbif
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                      6         6         0   100.00%
+    Statements                       2         2         0   100.00%
+
+=================================================================================
+=== Instance: /test_bench/u_timer/u_regset
+=== Design Unit: work.regset
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        41        41         0   100.00%
+    Expressions                     40        40         0   100.00%
+    Statements                      54        54         0   100.00%
+    Toggles                        378       378         0   100.00%
+
+=================================================================================
+=== Instance: /test_bench/u_timer/u_cnt
+=== Design Unit: work.counter
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10        10         0   100.00%
+    Statements                       9         9         0   100.00%
+    Toggles                        384       384         0   100.00%
+
+=================================================================================
+=== Instance: /test_bench/u_timer/u_cnt_ctrl
+=== Design Unit: work.cnt_ctrl
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        15        15         0   100.00%
+    Expressions                     15        15         0   100.00%
+    Statements                      19        19         0   100.00%
+    Toggles                         56        56         0   100.00%
+
+=================================================================================
+=== Instance: /test_bench/u_timer
+=== Design Unit: work.timer_top
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        150       150         0   100.00%
+
+=================================================================================
+=== Instance: /test_bench/u_tb_cnt
+=== Design Unit: work.mod_golden_cnt
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10        10         0   100.00%
+    Expressions                     10         7         3    70.00%
+    Statements                      10        10         0   100.00%
+    Toggles                        262       170        92    64.88%
+
+=================================================================================
+=== Instance: /test_bench
+=== Design Unit: work.test_bench
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        64        32        32    50.00%
+    Conditions                      38         0        38     0.00%
+    Statements                     355       335        20    94.36%
+    Toggles                        704       332       372    47.15%
+
+
+Total Coverage By Instance (filtered view): 68.89%
+

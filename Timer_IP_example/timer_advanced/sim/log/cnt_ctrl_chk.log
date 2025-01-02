@@ -1,9 +1,6 @@
-# vsim -debugDB -l cnt_ctrl_chk.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
-# Start time: 19:49:26 on Nov 15,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vsim-8611) Generating debug db.
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# vsim -coverage -l cnt_ctrl_chk.log -c test_bench -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit cnt_ctrl_chk.ucdb; log -r /*;run -all" 
+# Start time: 05:11:55 on Jan 03,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2023.3 linux_x86_64 Jul 17 2023
 # //
@@ -19,14 +16,8 @@
 # //  18 U.S.C. Section 1905.
 # //
 # Loading work.test_bench(fast)
-# Loading work.timer_top(fast)
-# Loading work.apbif(fast)
-# Loading work.regset(fast)
-# Loading work.counter(fast)
-# Loading work.cnt_ctrl(fast)
-# Loading work.mod_golden_cnt(fast)
-# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
-# log -r /*
+# coverage save -onexit cnt_ctrl_chk.ucdb
+#  log -r /*
 # run -all
 # ======================================
 # ====== Test Case: cnt control chk ====
@@ -14504,5 +14495,6 @@
 # Test_result PASSED
 # ** Note: $finish    : ../tb/test_bench.v(94)
 #    Time: 27614276 ns  Iteration: 0  Instance: /test_bench
-# End time: 19:49:35 on Nov 15,2024, Elapsed time: 0:00:09
-# Errors: 0, Warnings: 1
+# Saving coverage database on exit...
+# End time: 05:12:12 on Jan 03,2025, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 0

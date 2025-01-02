@@ -1,9 +1,6 @@
-# vsim -debugDB -l interrupt_chk.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
-# Start time: 22:06:03 on Jul 31,2024
+# vsim -coverage -l interrupt_chk.log -c test_bench -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit interrupt_chk.ucdb; log -r /*;run -all" 
+# Start time: 05:11:50 on Jan 03,2025
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Note: (vsim-8611) Generating debug db.
-# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2023.3 linux_x86_64 Jul 17 2023
 # //
@@ -19,14 +16,8 @@
 # //  18 U.S.C. Section 1905.
 # //
 # Loading work.test_bench(fast)
-# Loading work.timer_top(fast)
-# Loading work.apbif(fast)
-# Loading work.regset(fast)
-# Loading work.counter(fast)
-# Loading work.cnt_ctrl(fast)
-# Loading work.mod_golden_cnt(fast)
-# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
-# log -r /*
+# coverage save -onexit interrupt_chk.ucdb
+#  log -r /*
 # run -all
 # ====================================
 # ====== Test Case: check Interrupt===
@@ -140,5 +131,6 @@
 # Test_result PASSED
 # ** Note: $finish    : ../tb/test_bench.v(94)
 #    Time: 47025 ns  Iteration: 0  Instance: /test_bench
-# End time: 22:06:03 on Jul 31,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# Saving coverage database on exit...
+# End time: 05:11:50 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

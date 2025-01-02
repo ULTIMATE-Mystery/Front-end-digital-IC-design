@@ -1,9 +1,6 @@
-# vsim -debugDB -l apb_multiple_access.log -voptargs="+access" -assertdebug -c test_bench -do "log -r /*;run -all;" 
-# Start time: 17:08:23 on Nov 17,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vsim-8611) Generating debug db.
-# ** Warning: (vopt-4308) Enabling visibility using +acc is recommended with debug flow.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# vsim -coverage -l apb_unaligned_chk.log -c test_bench -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit apb_unaligned_chk.ucdb; log -r /*;run -all" 
+# Start time: 05:36:48 on Jan 03,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2023.3 linux_x86_64 Jul 17 2023
 # //
@@ -19,48 +16,50 @@
 # //  18 U.S.C. Section 1905.
 # //
 # Loading work.test_bench(fast)
-# Loading work.timer_top(fast)
-# Loading work.apbif(fast)
-# Loading work.regset(fast)
-# Loading work.counter(fast)
-# Loading work.cnt_ctrl(fast)
-# Loading work.mod_golden_cnt(fast)
-# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
-# log -r /*
+# coverage save -onexit apb_unaligned_chk.ucdb
+#  log -r /*
 # run -all
-# =========================================
-# === Test Case: APB Multi-access Test ====
-# =========================================
-# multiple APB access
-# write TDR0 & write TDR1
-# normal read
-# t=       475 [TB_READ]: addr=00000004 rdata=11111111
+# =====================================
+# === Test Case: APB Un-aligned Test===
+# =====================================
+# t=       100 [TB_WRITE]: addr=00000004 data=33333333
+# t=       375 [TB_READ]: addr=00000004 rdata=33333333
 # ------------------------------------------------
-# t=       475 PASS: rdata = 11111111 at addr 00000004 is correct
+# t=       375 PASS: rdata = 33333333 at addr 00000004 is correct
 # ------------------------------------------------
-# t=       625 [TB_READ]: addr=00000008 rdata=22222222
+# un-aligned: offset 0x1
+# t=       375 [TB_WRITE]: addr=00000005 data=44444444
+# t=       675 [TB_READ]: addr=00000005 rdata=00000000
 # ------------------------------------------------
-# t=       625 PASS: rdata = 22222222 at addr 00000008 is correct
+# t=       675 PASS: rdata = 00000000 at addr 00000005 is correct
 # ------------------------------------------------
-# normal write
-# t=       625 [TB_WRITE]: addr=00000004 data=33333333
-# t=       776 [TB_WRITE]: addr=00000008 data=44444444
-# multiple read
+# t=       825 [TB_READ]: addr=00000004 rdata=33333333
 # ------------------------------------------------
-# t=      1027 PASS: rdata = 33333333 at addr 00000004 is correct
+# t=       825 PASS: rdata = 33333333 at addr 00000004 is correct
 # ------------------------------------------------
+# un-aligned: offset 0x2
+# t=       825 [TB_WRITE]: addr=00000006 data=44444444
+# t=      1125 [TB_READ]: addr=00000006 rdata=00000000
 # ------------------------------------------------
-# t=      1127 PASS: rdata = 44444444 at addr 00000008 is correct
+# t=      1125 PASS: rdata = 00000000 at addr 00000006 is correct
 # ------------------------------------------------
-# w-r(TDR0)-w-r(TDR1)
+# t=      1275 [TB_READ]: addr=00000004 rdata=33333333
 # ------------------------------------------------
-# t=      1377 PASS: rdata = 55555555 at addr 00000004 is correct
+# t=      1275 PASS: rdata = 33333333 at addr 00000004 is correct
 # ------------------------------------------------
+# un-aligned: offset 0x3
+# t=      1275 [TB_WRITE]: addr=00000006 data=44444444
+# t=      1575 [TB_READ]: addr=00000007 rdata=00000000
 # ------------------------------------------------
-# t=      1577 PASS: rdata = 66666666 at addr 00000008 is correct
+# t=      1575 PASS: rdata = 00000000 at addr 00000007 is correct
+# ------------------------------------------------
+# t=      1725 [TB_READ]: addr=00000004 rdata=33333333
+# ------------------------------------------------
+# t=      1725 PASS: rdata = 33333333 at addr 00000004 is correct
 # ------------------------------------------------
 # Test_result PASSED
 # ** Note: $finish    : ../tb/test_bench.v(84)
-#    Time: 1726 ns  Iteration: 0  Instance: /test_bench
-# End time: 17:08:24 on Nov 17,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 1
+#    Time: 1825 ns  Iteration: 0  Instance: /test_bench
+# Saving coverage database on exit...
+# End time: 05:36:48 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
