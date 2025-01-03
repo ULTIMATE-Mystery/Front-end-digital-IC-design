@@ -1,0 +1,233 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /test_bench
+=== Design Unit: work.test_bench
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        16         8         8    50.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /test_bench
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../tb/test_bench.v
+------------------------------------IF Branch------------------------------------
+    33                                         1     Count coming in to IF
+    33              1                    ***0***     		if( count != 8'h00 ) begin
+    39              1                          1     		end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    51                                         1     Count coming in to IF
+    51              1                    ***0***     		if( count != 8'hff ) begin
+    57              1                          1     		end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    63                                         1     Count coming in to IF
+    63              1                    ***0***     		if( overflow != 1'b1) begin
+    69              1                          1     		end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    75                                         1     Count coming in to IF
+    75              1                    ***0***     		if( overflow == 1'b1) begin
+    79              1                          1     		end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    84                                         1     Count coming in to IF
+    84              1                    ***0***     		if( count != 8'h00 ) begin
+    90              1                          1     		end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    99                                         1     Count coming in to IF
+    99              1                    ***0***     		if( count != 8'ha ) begin
+    105             1                          1     		end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    132                                        1     Count coming in to IF
+    132             1                    ***0***     		if( count != 8'h0 ) begin
+    138             1                          1     		end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    148                                        1     Count coming in to IF
+    148             1                    ***0***     		if( count != 8'h0 ) begin
+    154             1                          1     		end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       6         0         6     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /test_bench --
+
+  File ../tb/test_bench.v
+----------------Focused Condition View-------------------
+Line       33 Item    1  (count != 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count != 0)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count != 0)_0        -                             
+  Row   2:    ***0***  (count != 0)_1        -                             
+
+----------------Focused Condition View-------------------
+Line       51 Item    1  (count != 255)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  (count != 255)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count != 255)_0      -                             
+  Row   2:    ***0***  (count != 255)_1      -                             
+
+----------------Focused Condition View-------------------
+Line       84 Item    1  (count != 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count != 0)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count != 0)_0        -                             
+  Row   2:    ***0***  (count != 0)_1        -                             
+
+----------------Focused Condition View-------------------
+Line       99 Item    1  (count != 10)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (count != 10)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count != 10)_0       -                             
+  Row   2:    ***0***  (count != 10)_1       -                             
+
+----------------Focused Condition View-------------------
+Line       132 Item    1  (count != 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count != 0)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count != 0)_0        -                             
+  Row   2:    ***0***  (count != 0)_1        -                             
+
+----------------Focused Condition View-------------------
+Line       148 Item    1  (count != 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+    Input Term   Covered  Reason for no coverage   Hint
+   -----------  --------  -----------------------  --------------
+  (count != 0)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count != 0)_0        -                             
+  Row   2:    ***0***  (count != 0)_1        -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      87        49        38    56.32%
+
+================================Statement Details================================
+
+Statement Coverage for instance /test_bench --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../tb/test_bench.v
+    34              1     			$display("------------------------------------------------");
+    35              1     			$display("t=%10d FAIL: the init value of counter is not 8'h00",$time);
+    36              1     			$display("------------------------------------------------");
+    37              1     		    #100;
+    38              1     		    $finish;
+    52              1     			$display("------------------------------------------------");
+    53              1     			$display("t=%10d FAIL: counter value is not correct, count = %2h , expect: 8'hff",$stime,count);
+    54              1     			$display("------------------------------------------------");
+    55              1     		    #100;
+    56              1     		    $finish;
+    64              1     			$display("------------------------------------------------");
+    65              1     			$display("t=%10d FAIL: overflow is not asserted",$stime);
+    66              1     			$display("------------------------------------------------");
+    67              1     		    #100;
+    68              1     		    $finish;
+    76              1     			$display("------------------------------------------------");
+    77              1     			$display("t=%10d FAIL: overflow is not negated",$stime);
+    78              1     			$display("------------------------------------------------");
+    85              1     			$display("------------------------------------------------");
+    86              1     			$display("t=%10d FAIL: counter value is not init to 8'h00 after overflow. count = %2h , expect: 8'h00",$stime, count);
+    87              1     			$display("------------------------------------------------");
+    88              1     		    #100;
+    89              1     		    $finish;
+    100             1     			$display("------------------------------------------------");
+    101             1     			$display("t=%10d FAIL: counter value is not correct, count = %2h , expect: 8'ha",$stime,count);
+    102             1     			$display("------------------------------------------------");
+    103             1     		    #100;
+    104             1     		    $finish;
+    133             1     			$display("------------------------------------------------");
+    134             1     			$display("t=%10d FAIL: counter value is not cleared when count_clr = 1'b1",$stime); 
+    135             1     			$display("------------------------------------------------");
+    136             1     		    #100;
+    137             1     		    $finish;
+    149             1     			$display("------------------------------------------------");
+    150             1     			$display("t=%10d FAIL: counter start counting even if counter_en is 1'b0",$stime); 
+    151             1     			$display("------------------------------------------------");
+    152             1     		    #100;
+    153             1     		    $finish;
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         26        23         3    88.46%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /test_bench --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                               clk           1           1      100.00 
+                                        count[0-7]           1           1      100.00 
+                                         count_clr           0           1       50.00 
+                                          count_en           0           1       50.00 
+                                          overflow           1           1      100.00 
+                                             rst_n           0           1       50.00 
+
+Total Node Count     =         13 
+Toggled Node Count   =         10 
+Untoggled Node Count =          3 
+
+Toggle Coverage      =      88.46% (23 of 26 bins)
+
+
+Total Coverage By Instance (filtered view): 48.69%
+
