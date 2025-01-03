@@ -1,5 +1,5 @@
 # vsim -coverage -l test.log -c test_bench -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit test.ucdb; log -r /*;run -all" 
-# Start time: 20:48:58 on Oct 28,2024
+# Start time: 18:49:58 on Jan 03,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2023.3 linux_x86_64 Jul 17 2023
@@ -19,8 +19,27 @@
 # coverage save -onexit test.ucdb
 #  log -r /*
 # run -all
-# ** Note: $finish    : ../tb/test_bench.v(57)
-#    Time: 280 ns  Iteration: 0  Instance: /test_bench
+# 
+# Starting tests...
+# [t = 0] a = 0, b = 0, c = 0
+# Test 0 passed: z = 0
+# [t = 5] a = 0, b = 1, c = 1
+# Test 1 passed: z = 0
+# [t = 10] a = 1, b = 1, c = 0
+# Test 2 passed: z = 1
+# [t = 15] a = 1, b = 0, c = 1
+# Test 3 passed: z = 1
+# [t = 20] a = 1, b = 0, c = 0
+# Test 4 passed: z = 0
+# 
+# === Test Summary ===
+# Total tests run: 5
+# Tests passed: 5
+# Tests failed: 0
+# 
+# PASSED: All tests passed successfully!
+# ** Note: $finish    : ../tb/test_bench.v(79)
+#    Time: 25 ns  Iteration: 0  Instance: /test_bench
 # Saving coverage database on exit...
-# End time: 20:48:59 on Oct 28,2024, Elapsed time: 0:00:01
+# End time: 18:49:59 on Jan 03,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

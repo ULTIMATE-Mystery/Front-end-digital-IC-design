@@ -4,10 +4,88 @@ Coverage Report by instance with details
 === Instance: /test_bench
 === Design Unit: work.test_bench
 =================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         4         2         2    50.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /test_bench
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../tb/test_bench.v
+------------------------------------IF Branch------------------------------------
+    29                                         5     Count coming in to IF
+    29              1                    ***0***                 if (z !== expected_z(a, b, c)) begin
+    33              1                          5                 end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    73                                         1     Count coming in to IF
+    73              1                          1             if (error_count == 0) begin
+    75              1                    ***0***             end else begin
+Branch totals: 1 hit of 2 branches = 50.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         0         2     0.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /test_bench --
+
+  File ../tb/test_bench.v
+----------------Focused Condition View-------------------
+Line       29 Item    1  (z !== expected_z(a,b,c))
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                 Input Term   Covered  Reason for no coverage   Hint
+                -----------  --------  -----------------------  --------------
+  (z !== expected_z(a,b,c))         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                   Non-masking condition(s)      
+ ---------  ---------  --------------------         -------------------------     
+  Row   1:          1  (z !== expected_z(a,b,c))_0  -                             
+  Row   2:    ***0***  (z !== expected_z(a,b,c))_1  -                             
+
+----------------Focused Condition View-------------------
+Line       73 Item    1  (error_count == 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+          Input Term   Covered  Reason for no coverage   Hint
+         -----------  --------  -----------------------  --------------
+  (error_count == 0)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (error_count == 0)_0  -                             
+  Row   2:          1  (error_count == 0)_1  -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      39        35         4    89.74%
+
+================================Statement Details================================
+
+Statement Coverage for instance /test_bench --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../tb/test_bench.v
+    30              1                     $display("Test %0d failed!", test_num);
+    31              1                     $display("Expected: z = %b, Got: z = %b", expected_z(a, b, c), z);
+    32              1                     error_count = error_count + 1;
+    76              1                 $display("\nFAILED: %0d out of %0d tests failed!", error_count, test_count);
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Toggles                          8         6         2    75.00%
+    Toggles                        136        12       124     8.82%
 
 ================================Toggle Details================================
 
@@ -18,14 +96,18 @@ Toggle Coverage for instance /test_bench --
                                                  a           0           1       50.00 
                                                  b           1           1      100.00 
                                                  c           1           1      100.00 
-                                                 z           0           1       50.00 
+                                 error_count[0-31]           0           0        0.00 
+                                   test_count[0-1]           1           1      100.00 
+                                     test_count[2]           0           1       50.00 
+                                  test_count[3-31]           0           0        0.00 
+                                                 z           1           1      100.00 
 
-Total Node Count     =          4 
-Toggled Node Count   =          2 
-Untoggled Node Count =          2 
+Total Node Count     =         68 
+Toggled Node Count   =          5 
+Untoggled Node Count =         63 
 
-Toggle Coverage      =      75.00% (6 of 8 bins)
+Toggle Coverage      =       8.82% (12 of 136 bins)
 
 
-Total Coverage By Instance (filtered view): 75.00%
+Total Coverage By Instance (filtered view): 37.14%
 

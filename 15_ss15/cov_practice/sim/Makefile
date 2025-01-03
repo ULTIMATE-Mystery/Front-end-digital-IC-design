@@ -8,7 +8,6 @@
 TESTNAME 	?= test
 TB_NAME 	?= test_bench
 RADIX		?= decimal
-MEALY_FSM   ?= 0
 
 #==============================
 all: build run
@@ -26,7 +25,7 @@ build_cov:
 	vmap work work
 	vlog +cover=bcesft -f compile.f
 run:
-	vsim -debugDB -l $(TESTNAME).log -voptargs=+acc -assertdebug -c $(TB_NAME) -do "log -r /*;run -all;" -GMEALY_FSM=$(MEALY_FSM)
+	vsim -debugDB -l $(TESTNAME).log -voptargs=+acc -assertdebug -c $(TB_NAME) -do "log -r /*;run -all;"
 run_cov:
 	vsim -coverage -l $(TESTNAME).log -c $(TB_NAME) -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit $(TESTNAME).ucdb; log -r /*;run -all"
 wave:
@@ -42,6 +41,8 @@ gen_html:
 	vcover report -zeros -details -code bcesft -annotate -testhitdataAll -html IP.ucdb 
 clean:
 	rm -rf work
+	rm -rf coverage
+	rm -rf covhtmlreport
 	rm -rf vsim.dbg
 	rm -rf *.ini
 	rm -rf *.log
@@ -60,6 +61,6 @@ help:
 	@echo "** make all_cov  : build and run simulation in coverage mode"
 	@echo "** make wave     : open waveform"
 	@echo "** make gen_cov  : merge, generate coverage data base and text coverage report"
-	@echo "** make gen_cov  : merge, gemerate coverage data base and html coverage report"
+	@echo "** make gen_html : merge, generate coverage data base and html coverage report"
 	@echo "****************************************"
 	@echo ""

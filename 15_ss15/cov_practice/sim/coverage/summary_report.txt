@@ -15,9 +15,12 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Statements                      38        38         0   100.00%
-    Toggles                          8         6         2    75.00%
+    Branches                         4         2         2    50.00%
+    Conditions                       2         0         2     0.00%
+    Expressions                      3         3         0   100.00%
+    Statements                      39        35         4    89.74%
+    Toggles                        136        12       124     8.82%
 
 
-Total Coverage By Instance (filtered view): 91.66%
+Total Coverage By Instance (filtered view): 49.76%
 

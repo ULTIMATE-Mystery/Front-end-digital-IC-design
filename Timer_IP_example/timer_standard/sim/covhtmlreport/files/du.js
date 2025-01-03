@@ -1,0 +1,2 @@
+var g_data = {"data":[{"n":"work.mod_golden_cnt","id":7,"zf":1,"tc":83.72,"fe":70.00,"t":64.88},{"n":"work.test_bench","id":1,"zf":1,"tc":47.47,"s":94.36,"b":48.38,"fc":0.00,"t":47.15}]};
+processDuData(g_data);

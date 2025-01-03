@@ -10,12 +10,12 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 d/ictc/student-data/duyquang/15_ss15/cov_practice/sim
+Z1 d/ictc/student_data/duyquang/15_ss15/cov_practice/sim
 T_opt
-!s110 1730123339
-Vm9`V:e@N<;RhLNHZzJC6`0
+!s110 1735904998
+VYD[;iPkjO[CYP2:DQlOnM0
 04 10 4 work test_bench fast 0
-=1-000ae431a4f1-671f964b-2276-1e70c1
+=1-bc241189994b-6777cee6-be23e-577f
 Z2 !s102 +cover=bcesft
 R0
 !s12b OEM100
@@ -26,22 +26,22 @@ n@_opt
 OL;O;2023.3;77
 vtest_bench
 Z4 2../rtl/top.v|../tb/test_bench.v
-Z5 !s110 1730123338
+Z5 !s110 1735904997
 !i10b 1
-!s100 o]8=ze:?Bz=[jZ;8Y>P<=2
-ID]:eNQ45ZbDA[Q^j7I=cP2
+!s100 g]TVdM@^PzhDm<W^PbgKF0
+Iidkm?RQlQPCCcl2WeZ;8Q3
 R1
-w1730123283
+w1735903411
 8../tb/test_bench.v
 F../tb/test_bench.v
 !i122 0
-L0 1 60
+L0 1 82
 Z6 VDg1SIo80bB@j0V0VzS_@n1
 Z7 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z8 !s108 1730123338.000000
+Z8 !s108 1735904997.000000
 Z9 !s107 ../tb/test_bench.v|../rtl/top.v|
 Z10 !s90 +cover=bcesft|-f|compile.f|
 !i113 0
