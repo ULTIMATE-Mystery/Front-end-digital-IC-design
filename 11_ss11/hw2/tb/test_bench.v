@@ -53,7 +53,7 @@ module test_bench;
             penable = 1'b0;
             paddr   = addr;
             pwdata  = wdata;
-            ready_delay = ($random % 5 + 5) % 5;  // 0-4 cycles delay
+            ready_delay = ($random % 5 + 5) % 5;  // 0-5 cycles delay
 
             @(posedge pclk);
             penable = 1'b1;
@@ -81,7 +81,7 @@ module test_bench;
             pwrite  = 1'b0;
             penable = 1'b0;
             paddr   = addr;
-            ready_delay = ($random % 5 + 5) % 5;  // 0-4 cycles delay
+            ready_delay = ($random % 5 + 5) % 5;  // 0-5 cycles delay
 
             @(posedge pclk);
             penable = 1'b1;
@@ -113,7 +113,7 @@ module test_bench;
                 data = {$random, $random} & 32'hFFFFFFFF;
                 is_write = {$random} & 1'b1;
 
-                // Random idle cycles (0-3)
+                // Random idle cycles
                 repeat($random & 2'b11) @(posedge pclk);
 
                 // Perform transfer

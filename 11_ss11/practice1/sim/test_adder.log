@@ -1,0 +1,31 @@
+# vsim -debugDB -l test_adder.log -voptargs="+acc" -assertdebug -c test_bench -do "log -r /*;run -all;" 
+# Start time: 15:34:16 on Jan 03,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.test_bench(fast)
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# log -r /*
+# run -all
+# [t = 0] rst_n=0 enable=0 data=00
+# [t = 201000] rst_n=1 enable=0 data=00
+# [t = 301000] rst_n=1 enable=1 data=aa
+# [t = 401000] rst_n=1 enable=1 data=bb
+# [t = 501000] rst_n=1 enable=1 data=cc
+# [t = 601000] rst_n=1 enable=0 data=00
+# ** Note: $finish    : ../tb/test_bench.v(47)
+#    Time: 701 ns  Iteration: 0  Instance: /test_bench
+# End time: 15:34:16 on Jan 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
