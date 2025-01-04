@@ -36,10 +36,10 @@ R1
 cModel Technology
 Z2 d/ictc/student_data/duyquang/Timer_IP_example/timer_advanced/sim
 T_opt
-!s110 1735855953
-VZ@oJ8C:kMYaiQ8oh4dAlL0
+!s110 1736004606
+VB5J4oiDod0ZfaXd6iEGYU0
 04 10 4 work test_bench fast 0
-=1-bc2411fb702e-67770f51-98b29-21966a
+=1-bc241189994b-677953fd-e5051-103c81
 Z3 !s102 +cover=bcesft
 R1
 !s12b OEM100
@@ -50,7 +50,7 @@ n@_opt
 OL;O;2023.3;77
 vapbif
 Z5 2../rtl/regset.v|../rtl/counter.v|../rtl/apbif.v|../rtl/cnt_ctrl.v|../rtl/timer_top.v|../tb/test_bench.v
-Z6 !s110 1735855952
+Z6 !s110 1736004605
 !i10b 1
 !s100 MHQRUiL?FkDbob:DFY61H2
 IAz?C0oi2f<SiUGFc5][JN3
@@ -65,7 +65,7 @@ Z9 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z10 !s108 1735855952.000000
+Z10 !s108 1736004605.000000
 Z11 !s107 run_test.v|../tb/test_bench.v|../rtl/timer_top.v|../rtl/cnt_ctrl.v|../rtl/apbif.v|../rtl/counter.v|../rtl/regset.v|
 Z12 !s90 +cover=bcesft|-f|compile.f|
 !i113 0
@@ -175,7 +175,7 @@ R6
 !s100 2JmmLgD4>KXE1bcJBLAR?3
 I8@Mdjc:JO`g5=^C<dY0nz2
 R2
-w1735855952
+w1736004604
 R14
 R15
 Frun_test.v

@@ -1,5 +1,5 @@
 # vsim -coverage -l cnt_halt_chk.log -c test_bench -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit cnt_halt_chk.ucdb; log -r /*;run -all" 
-# Start time: 05:12:13 on Jan 03,2025
+# Start time: 22:29:44 on Jan 04,2025
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2023.3 linux_x86_64 Jul 17 2023
@@ -11852,5 +11852,5 @@
 # ** Note: $finish    : ../tb/test_bench.v(94)
 #    Time: 27106776 ns  Iteration: 0  Instance: /test_bench
 # Saving coverage database on exit...
-# End time: 05:12:23 on Jan 03,2025, Elapsed time: 0:00:10
+# End time: 22:29:56 on Jan 04,2025, Elapsed time: 0:00:12
 # Errors: 0, Warnings: 0

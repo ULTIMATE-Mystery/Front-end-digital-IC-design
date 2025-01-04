@@ -1,5 +1,5 @@
 # vsim -coverage -l reg_1hot_chk.log -c test_bench -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit reg_1hot_chk.ucdb; log -r /*;run -all" 
-# Start time: 05:12:28 on Jan 03,2025
+# Start time: 22:30:01 on Jan 04,2025
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Intel Starter FPGA Edition-64
 # //  Version 2023.3 linux_x86_64 Jul 17 2023
@@ -66,5 +66,5 @@
 # ** Note: $finish    : ../tb/test_bench.v(94)
 #    Time: 3375 ns  Iteration: 0  Instance: /test_bench
 # Saving coverage database on exit...
-# End time: 05:12:29 on Jan 03,2025, Elapsed time: 0:00:01
+# End time: 22:30:01 on Jan 04,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0

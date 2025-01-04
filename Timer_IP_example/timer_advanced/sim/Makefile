@@ -69,6 +69,6 @@ help:
 	@echo "** make all_cov  : build and run simulation in coverage mode"
 	@echo "** make wave     : open waveform"
 	@echo "** make gen_cov  : merge, generate coverage data base and text coverage report"
-	@echo "** make gen_cov  : merge, gemerate coverage data base and html coverage report"
+	@echo "** make gen_html : merge, generate coverage data base and html coverage report"
 	@echo "****************************************"
 	@echo ""

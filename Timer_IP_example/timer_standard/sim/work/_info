@@ -30,10 +30,10 @@ R1
 cModel Technology
 Z2 d/ictc/student_data/duyquang/Timer_IP_example/timer_standard/sim
 T_opt
-!s110 1735857408
-VaW=J;_SchDNQL_7;=ib?b1
+!s110 1736004839
+V^9;;OG@C9YY9?Yl@2m]li1
 04 10 4 work test_bench fast 0
-=1-bc2411fb702e-67771500-4cdbc-224efd
+=1-bc241189994b-677954e7-312e3-1050f2
 Z3 !s102 +cover=bcesft
 R1
 !s12b OEM100
@@ -44,7 +44,7 @@ n@_opt
 OL;O;2023.3;77
 vapbif
 Z5 2../rtl/regset.v|../rtl/counter.v|../rtl/apbif.v|../rtl/cnt_ctrl.v|../rtl/timer_top.v|../tb/test_bench.v
-Z6 !s110 1735857407
+Z6 !s110 1736004838
 !i10b 1
 !s100 6[O1FfS8nz^j;605@SXQe3
 Ig?`NkmjG7z:HJ=mGieC?;2
@@ -59,7 +59,7 @@ Z9 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z10 !s108 1735857407.000000
+Z10 !s108 1736004838.000000
 Z11 !s107 run_test.v|../tb/test_bench.v|../rtl/timer_top.v|../rtl/cnt_ctrl.v|../rtl/apbif.v|../rtl/counter.v|../rtl/regset.v|
 Z12 !s90 +cover=bcesft|-f|compile.f|
 !i113 0
@@ -169,7 +169,7 @@ R6
 !s100 MNFG=Y]Y`bR7X1<lcF<A@1
 IRLaES=2`K<5@OgXI4<VYR2
 R2
-w1735857407
+w1736004838
 R14
 R15
 Frun_test.v
