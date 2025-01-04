@@ -36,10 +36,10 @@ R1
 cModel Technology
 Z2 d/ictc/student_data/duyquang/Timer_IP/sim
 T_opt
-!s110 1734359653
-VL^SMLOIY2Bio@`d9]h];A3
+!s110 1735990502
+VJ6;GOz4@Ik_SngCW_cf2T1
 04 9 4 work testbench fast 0
-=1-bc2411fb702e-67603a65-6423c-20f25e
+=1-bc241189994b-67791ce6-19e09-d060e
 Z3 !s102 +cover=bcesft
 R1
 !s12b OEM100
@@ -50,12 +50,12 @@ n@_opt
 OL;O;2023.3;77
 vtestbench
 Z5 2../rtl/timer_apb_if.v|../rtl/timer_registers.v|../rtl/timer_counter.v|../rtl/timer_ctrl.v|../rtl/timer_interrupt.v|../rtl/timer_top.v|../tb/testbench.v
-Z6 !s110 1734359652
+Z6 !s110 1735990501
 !i10b 1
 !s100 5MJ0RHhnGzzS3VW]aVk^g0
 Iig[Ka7kVABKUJCk_iUIPl0
 R2
-w1734359652
+w1735990501
 8../tb/testbench.v
 F../tb/testbench.v
 Frun_test.v
@@ -66,7 +66,7 @@ Z8 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z9 !s108 1734359652.000000
+Z9 !s108 1735990501.000000
 Z10 !s107 run_test.v|../tb/testbench.v|../rtl/timer_top.v|../rtl/timer_interrupt.v|../rtl/timer_ctrl.v|../rtl/timer_counter.v|../rtl/timer_registers.v|../rtl/timer_apb_if.v|
 Z11 !s90 +cover=bcesft|-f|compile.f|
 !i113 0

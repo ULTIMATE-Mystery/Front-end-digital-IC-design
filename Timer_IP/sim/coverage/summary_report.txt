@@ -24,7 +24,7 @@ Coverage Report Summary Data by instance
     Conditions                       4         4         0   100.00%
     Expressions                     13        13         0   100.00%
     Statements                      48        48         0   100.00%
-    Toggles                        582       460       122    79.03%
+    Toggles                        458       458         0   100.00%
 
 =================================================================================
 === Instance: /testbench/u_timer_top/u_timer_ctrl
@@ -80,5 +80,5 @@ Coverage Report Summary Data by instance
     Toggles                        196       194         2    98.97%
 
 
-Total Coverage By Instance (filtered view): 94.07%
+Total Coverage By Instance (filtered view): 95.15%
 

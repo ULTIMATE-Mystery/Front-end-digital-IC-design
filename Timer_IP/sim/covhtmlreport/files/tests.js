@@ -1,0 +1,2 @@
+var g_data = {"0":"apb_multiple_access","1":"apb_protocol_chk","2":"apb_pslverr_chk","3":"apb_unaligned_chk","4":"cnt_counting_chk","5":"cnt_ctrl_chk","6":"cnt_halt_chk","7":"interrupt_chk","8":"reg_1hot_chk","9":"reg_byte_access","10":"reg_init_chk","11":"reg_reserved_chk","12":"reg_rw_chk"};
+processTestsData(g_data);

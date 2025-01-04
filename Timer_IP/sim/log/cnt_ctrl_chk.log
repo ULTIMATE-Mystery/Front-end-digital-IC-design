@@ -1,5 +1,5 @@
 # vsim -coverage -l cnt_ctrl_chk.log -c testbench -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit cnt_ctrl_chk.ucdb; log -r /*;run -all" 
-# Start time: 21:34:01 on Dec 16,2024
+# Start time: 18:34:50 on Jan 04,2025
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Note: (vopt-143) Recognized 1 FSM in module "timer_apb_if(fast)".
 # //  Questa Intel Starter FPGA Edition-64
@@ -175,5 +175,5 @@
 # ** Note: $finish    : ../tb/testbench.v(297)
 #    Time: 53837500 ps  Iteration: 0  Instance: /testbench
 # Saving coverage database on exit...
-# End time: 21:34:02 on Dec 16,2024, Elapsed time: 0:00:01
+# End time: 18:34:51 on Jan 04,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

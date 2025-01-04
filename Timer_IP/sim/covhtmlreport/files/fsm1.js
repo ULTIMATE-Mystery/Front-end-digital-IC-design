@@ -1,0 +1,2 @@
+var g_data = {"10":{"pr":"/testbench/u_timer_top/u_timer_apb_if","fsms":[["current_state",4,57,[["IDLE",0,4,57,3339,"                 0"],["SETUP",0,4,64,1623,"                 1"],["ACCESS",0,4,71,1614,"                 2"],["IDLE -> SETUP",1,4,59,1617,0],["SETUP -> IDLE",1,4,68,6,1],["SETUP -> ACCESS",1,4,66,1614,2],["ACCESS -> IDLE",1,4,76,1611,3],["ACCESS -> SETUP",1,4,74,3,4]],100.00,100.00]]}};
+processFsmData(g_data);

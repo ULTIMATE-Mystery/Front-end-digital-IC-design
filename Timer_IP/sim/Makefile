@@ -59,6 +59,9 @@ gen_html:
 # Clean all compiled data
 clean:
 	rm -rf work
+	rm -rf log
+	rm -rf coverage
+	rm -rf covhtmlreport
 	rm -rf vsim.dbg
 	rm -rf *.ini
 	rm -rf *.log
@@ -69,12 +72,17 @@ clean:
 
 # Help command
 help:
+	@echo ""
 	@echo "****************************************"
-	@echo "** make clean   : clean all compiled data"
-	@echo "** make build   : build the design"
-	@echo "** make run     : run simulation"
-	@echo "** make all     : build and run simulation"
-	@echo "** make wave    : open waveform"
-	@echo "** make gen_cov : generate coverage report"
-	@echo "** make gen_html: generate HTML coverage report"
+	@echo "** make clean    : clean all compiled data"
+	@echo "** make build    : build the design"
+	@echo "** make build_cov: build the design in coverage mode"
+	@echo "** make run      : run simulation"
+	@echo "** make run_cov  : run simulation in coverage mode"
+	@echo "** make all      : build and run simulation"
+	@echo "** make all_cov  : build and run simulation in coverage mode"
+	@echo "** make wave     : open waveform"
+	@echo "** make gen_cov  : merge, generate coverage data base and text coverage report"
+	@echo "** make gen_html : merge, generate coverage data base and html coverage report"
 	@echo "****************************************"
+	@echo ""
